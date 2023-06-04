@@ -7,21 +7,19 @@
     <link rel="stylesheet" href="css/signup.css">
 </head>
 <body>
-    <h1>Sign Up</h1>
+    <div class="wrapper">
+        <form class="form-signup">
+            <h1 class="signup-heading">Sign Up</h1>
+            <input type="text" id="username" name="username" placeholder="Username" required><br>
 
-    <form action="signup" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br>
+            <input type="email" id="email" name="email" placeholder="Email" required><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br>
+            <input type="password" id="password" name="password" placeholder="Password" required><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br>
+            <input type="submit" value="Sign Up" class="signup-submit">
+        </form>
 
-        <input type="submit" value="Sign Up">
-    </form>
-
-    <p>Already have an account? <a href="login.jsp">Log in</a></p>
+        <p class="signup-login-link">Already have an account? <a href="login.jsp">Log in</a></p>
+    </div>
 </body>
 </html>

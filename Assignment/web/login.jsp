@@ -12,8 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
     <link rel='stylesheet' href='https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css'>
-      <link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/demo.css">
+      <link rel="stylesheet" href="css/login.css">
   
   </head>
   <body>
