@@ -1,3 +1,4 @@
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,7 +45,7 @@
                         <nav class="main-nav">
                             <!-- ***** Logo Start ***** -->
                             <a href="index.jsp" class="logo">
-                                <img src="assets/images/logo.png">
+                                <img src="assets/images/logo1.png">
                             </a>
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->
@@ -96,7 +97,7 @@
                                         <a href="products.html">Purchase Now!</a>
                                     </div>
                                 </div>
-                                <img src="assets/images/Gym.jpg" alt="">
+                                <img src="assets/images/Gym2.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -266,7 +267,7 @@
                                         <img src="assets/images/men-03.jpg" alt="">
                                     </div>
                                     <div class="down-content">
-                                        <h4>Love Nana ?20</h4>
+                                        <h4>Love Nana ‘20</h4>
                                         <span>$150.00</span>
                                         <ul class="stars">
                                             <li><i class="fa fa-star"></i></li>
@@ -737,7 +738,7 @@
                     <div class="col-lg-3">
                         <div class="first-item">
                             <div class="logo">
-                                <img src="assets/images/white-logo.png" alt="hexashop ecommerce templatemo">
+                                <img src="assets/images/black-logo.png" alt="hexashop ecommerce templatemo">
                             </div>
                             <ul>
                                 <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
@@ -749,8 +750,8 @@
                     <div class="col-lg-3">
                         <h4>Shopping &amp; Categories</h4>
                         <ul>
-                            <li><a href="#">Men?s Shopping</a></li>
-                            <li><a href="#">Women?s Shopping</a></li>
+                            <li><a href="#">Men’s Shopping</a></li>
+                            <li><a href="#">Women’s Shopping</a></li>
                             <li><a href="#">Kid's Shopping</a></li>
                         </ul>
                     </div>
@@ -774,7 +775,7 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="under-footer">
-                            <p>Copyright � 2022 HexaShop Co., Ltd. All Rights Reserved. 
+                            <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved. 
 
                                 <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
                             <ul>
