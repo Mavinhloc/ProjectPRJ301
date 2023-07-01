@@ -43,7 +43,7 @@
                     <div class="col-12">
                         <nav class="main-nav">
                             <!-- ***** Logo Start ***** -->
-                            <a href="index.html" class="logo">
+                            <a href="index.jsp" class="logo">
                                 <img src="assets/images/logo.png">
                             </a>
                             <!-- ***** Logo End ***** -->
@@ -68,7 +68,6 @@
                                         <li><a href="#">Features Page 1</a></li>
                                         <li><a href="#">Features Page 2</a></li>
                                         <li><a href="#">Features Page 3</a></li>
-                                        <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
                                     </ul>
                                 </li>
                                 <li class="scroll-to-section"><a href="#explore">Explore</a></li>
@@ -92,13 +91,12 @@
                         <div class="left-content">
                             <div class="thumb">
                                 <div class="inner-content">
-                                    <h4>We Are Hexashop</h4>
-                                    <span>Awesome, clean &amp; creative HTML5 Template</span>
+                                    <h4>We Are Home Gym</h4>
                                     <div class="main-border-button">
-                                        <a href="#">Purchase Now!</a>
+                                        <a href="products.html">Purchase Now!</a>
                                     </div>
                                 </div>
-                                <img src="assets/images/left-banner-image.jpg" alt="">
+                                <img src="assets/images/Gym.jpg" alt="">
                             </div>
                         </div>
                     </div>
@@ -268,7 +266,7 @@
                                         <img src="assets/images/men-03.jpg" alt="">
                                     </div>
                                     <div class="down-content">
-                                        <h4>Love Nana ‘20</h4>
+                                        <h4>Love Nana ?20</h4>
                                         <span>$150.00</span>
                                         <ul class="stars">
                                             <li><i class="fa fa-star"></i></li>
@@ -751,8 +749,8 @@
                     <div class="col-lg-3">
                         <h4>Shopping &amp; Categories</h4>
                         <ul>
-                            <li><a href="#">Men’s Shopping</a></li>
-                            <li><a href="#">Women’s Shopping</a></li>
+                            <li><a href="#">Men?s Shopping</a></li>
+                            <li><a href="#">Women?s Shopping</a></li>
                             <li><a href="#">Kid's Shopping</a></li>
                         </ul>
                     </div>
@@ -776,7 +774,7 @@
                     </div>
                     <div class="col-lg-12">
                         <div class="under-footer">
-                            <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved. 
+                            <p>Copyright � 2022 HexaShop Co., Ltd. All Rights Reserved. 
 
                                 <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
                             <ul>
