@@ -57,10 +57,10 @@
                                 <li class="submenu">
                                     <a href="javascript:;">Pages</a>
                                     <ul>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="products.html">Products</a></li>
-                                        <li><a href="single-product.html">Single Product</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="about.jsp">About Us</a></li>
+                                        <li><a href="products.jsp">Products</a></li>
+                                        <li><a href="single-product.jsp">Single Product</a></li>
+                                        <li><a href="contact.jsp">Contact Us</a></li>
                                     </ul>
                                 </li>
                                 <li class="submenu">
@@ -94,7 +94,7 @@
                                 <div class="inner-content">
                                     <h4>We Are Home Gym</h4>
                                     <div class="main-border-button">
-                                        <a href="products.html">Purchase Now!</a>
+                                        <a href="products.jsp">Purchase Now!</a>
                                     </div>
                                 </div>
                                 <img src="assets/images/Gym2.jpg" alt="">
@@ -213,9 +213,9 @@
                                     <div class="thumb">
                                         <div class="hover-content">
                                             <ul>
-                                                <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
                                             </ul>
                                         </div>
                                         <img src="assets/images/men-01.jpg" alt="">
@@ -236,9 +236,9 @@
                                     <div class="thumb">
                                         <div class="hover-content">
                                             <ul>
-                                                <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
                                             </ul>
                                         </div>
                                         <img src="assets/images/men-02.jpg" alt="">
@@ -259,9 +259,9 @@
                                     <div class="thumb">
                                         <div class="hover-content">
                                             <ul>
-                                                <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
                                             </ul>
                                         </div>
                                         <img src="assets/images/men-03.jpg" alt="">
@@ -282,9 +282,9 @@
                                     <div class="thumb">
                                         <div class="hover-content">
                                             <ul>
-                                                <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
                                             </ul>
                                         </div>
                                         <img src="assets/images/men-01.jpg" alt="">
@@ -330,9 +330,9 @@
                                     <div class="thumb">
                                         <div class="hover-content">
                                             <ul>
-                                                <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
                                             </ul>
                                         </div>
                                         <img src="assets/images/women-01.jpg" alt="">
@@ -353,9 +353,9 @@
                                     <div class="thumb">
                                         <div class="hover-content">
                                             <ul>
-                                                <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
                                             </ul>
                                         </div>
                                         <img src="assets/images/women-02.jpg" alt="">
@@ -376,9 +376,9 @@
                                     <div class="thumb">
                                         <div class="hover-content">
                                             <ul>
-                                                <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
                                             </ul>
                                         </div>
                                         <img src="assets/images/women-03.jpg" alt="">
@@ -399,9 +399,9 @@
                                     <div class="thumb">
                                         <div class="hover-content">
                                             <ul>
-                                                <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
                                             </ul>
                                         </div>
                                         <img src="assets/images/women-01.jpg" alt="">
@@ -447,9 +447,9 @@
                                     <div class="thumb">
                                         <div class="hover-content">
                                             <ul>
-                                                <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
                                             </ul>
                                         </div>
                                         <img src="assets/images/kid-01.jpg" alt="">
@@ -470,9 +470,9 @@
                                     <div class="thumb">
                                         <div class="hover-content">
                                             <ul>
-                                                <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
                                             </ul>
                                         </div>
                                         <img src="assets/images/kid-02.jpg" alt="">
@@ -493,9 +493,9 @@
                                     <div class="thumb">
                                         <div class="hover-content">
                                             <ul>
-                                                <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
                                             </ul>
                                         </div>
                                         <img src="assets/images/kid-03.jpg" alt="">
@@ -516,9 +516,9 @@
                                     <div class="thumb">
                                         <div class="hover-content">
                                             <ul>
-                                                <li><a href="single-product.html"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
+                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
                                             </ul>
                                         </div>
                                         <img src="assets/images/kid-01.jpg" alt="">
@@ -557,7 +557,7 @@
                             <p>There are 5 pages included in this HexaShop Template and we are providing it to you for absolutely free of charge at our TemplateMo website. There are web development costs for us.</p>
                             <p>If this template is beneficial for your website or business, please kindly <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">support us</a> a little via PayPal. Please also tell your friends about our great website. Thank you.</p>
                             <div class="main-border-button">
-                                <a href="products.html">Discover More</a>
+                                <a href="products.jsp">Discover More</a>
                             </div>
                         </div>
                     </div>
