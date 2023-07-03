@@ -117,8 +117,8 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-4">
-                        <c:forEach items="${listP}" var="o">
+                    <c:forEach items="${listP}" var="o">
+                        <div class="col-lg-4">
                             <div class="item">
                                 <div class="thumb">
                                     <div class="hover-content">
@@ -136,9 +136,10 @@
                                     <h5>${o.title}</h5>
                                 </div>
                             </div>
-                        </c:forEach>
-                    </div>
+                        </div>
+                    </c:forEach>
                 </div>
+
 
                 <%--Chuyen trang --%>
                 <div class="col-lg-12">
