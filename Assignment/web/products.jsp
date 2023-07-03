@@ -102,6 +102,44 @@
         </div>
         <!-- ***** Main Banner Area End ***** -->
 
+        <!-- ***** Category Area Starts ***** -->
+        <section class="section category-section" id="categories">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-heading">
+                            <h2>Shop by Category</h2>
+                            <span>Explore our product categories.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Search products" aria-label="Search" aria-describedby="searchButton">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary" type="button" id="searchButton">Search</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                ${chosenCategory}
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="categoryDropdown">
+                                <c:forEach items="${categories}" var="category">
+                                    <a class="dropdown-item ${category.name == chosenCategory ? 'active' : ''}" href="#">${category.name}</a>
+                                </c:forEach>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ***** Category Area Ends ***** -->
+
+
 
         <!-- ***** Products Area Starts ***** -->
         <section class="section" id="products">

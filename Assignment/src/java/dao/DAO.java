@@ -5,6 +5,7 @@
 package dao;
 
 import context.DBContext;
+import entity.Category;
 import entity.Product;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -21,15 +22,15 @@ public class DAO {
     Connection conn = null;
     PreparedStatement ps = null;
     ResultSet rs = null;
-    
-    public List<Product> getAllProduct(){
+
+    public List<Product> getAllProduct() {
         List<Product> list = new ArrayList<>();
         String query = "select * from product";
         try {
             conn = new DBContext().getConnection();//ket noi SQL
             ps = conn.prepareStatement(query);
             rs = ps.executeQuery();
-            while(rs.next()){
+            while (rs.next()) {
                 list.add(new Product(rs.getInt(1),
                         rs.getString(2),
                         rs.getString(3),
@@ -43,4 +44,20 @@ public class DAO {
         return list;
     }
 
+    public List<Category> getAllCategory() {
+        List<Category> list = new ArrayList<>();
+        String query = "select * from category";
+        try {
+            conn = new DBContext().getConnection();//ket noi SQL
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new Category(rs.getInt(1),
+                        rs.getString(2)
+                ));
+            }
+        } catch (Exception e) {
+        }
+        return list;
+    }
 }
