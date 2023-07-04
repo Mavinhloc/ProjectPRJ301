@@ -10,7 +10,6 @@ import entity.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -20,8 +19,7 @@ import java.util.List;
  *
  * @author ASUS
  */
-@WebServlet(name = "HomeControl", urlPatterns = {"/home"})
-public class HomeControl extends HttpServlet {
+public class CategoryControl extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,14 +35,16 @@ public class HomeControl extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            //Get data
+            String cateID = request.getParameter("cid");
+
             DAO dao = new DAO();
-            List<Product> list = dao.getAllProduct();
+            List<Product> list = dao.getAllProductByCategory(cateID);
             List<Category> listC = dao.getAllCategory();
 
-            //Set data
             request.setAttribute("listP", list);
             request.setAttribute("listC", listC);
+            request.setAttribute("tag", cateID);
+
             request.getRequestDispatcher("products.jsp").forward(request, response);
         }
     }

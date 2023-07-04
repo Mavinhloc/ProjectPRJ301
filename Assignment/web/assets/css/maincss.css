@@ -1566,6 +1566,11 @@ footer .under-footer a:hover {
 Products Page
 --------------------------------------------- 
 */
+.item {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+}
 
 .page-heading {
     margin-top: 160px;

@@ -19,7 +19,7 @@
 
         <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
 
-        <link rel="stylesheet" href="assets/css/templatemo-hexashop.css">
+        <link rel="stylesheet" href="assets/css/maincss.css">
 
         <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
@@ -125,11 +125,11 @@
                     <div class="col-lg-6">
                         <div class="dropdown">
                             <button class="btn btn-primary dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                ${chosenCategory}
+                                Category
                             </button>
-                            <div class="dropdown-menu" aria-labelledby="categoryDropdown">
-                                <c:forEach items="${categories}" var="category">
-                                    <a class="dropdown-item ${category.name == chosenCategory ? 'active' : ''}" href="#">${category.name}</a>
+                            <div class="dropdown-menu" aria-labelledby="categoryDropdown"> 
+                                <c:forEach items="${listC}" var="o">
+                                    <a class="dropdown-item ${tag == o.cid ? "active" : ""}" href="category?cid=${o.cid}">${o.cname}</a>
                                 </c:forEach>
                             </div>
                         </div>
@@ -169,7 +169,7 @@
                                     <img src="${o.image}" alt="">
                                 </div>
                                 <div class="down-content">
-                                    <h4>${o.name}</h4>
+                                    <h4><a href="detail?pid=${o.id}">${o.name}</a></h4>
                                     <span>${o.price} $</span>
                                     <h5>${o.title}</h5>
                                 </div>
@@ -205,67 +205,9 @@
 
         </section>
         <!-- ***** Products Area Ends ***** -->
-
-        <!-- ***** Footer Start ***** -->
-        <footer>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-3">
-                        <div class="first-item">
-                            <div class="logo">
-                                <img src="assets/images/black-logo.png" alt="">
-                            </div>
-                            <ul>
-                                <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
-                                <li><a href="#">hexashop@company.com</a></li>
-                                <li><a href="#">010-020-0340</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <h4>Shopping &amp; Categories</h4>
-                        <ul>
-                            <li><a href="#">Men?s Shopping</a></li>
-                            <li><a href="#">Women?s Shopping</a></li>
-                            <li><a href="#">Kid's Shopping</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li><a href="#">Homepage</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3">
-                        <h4>Help &amp; Information</h4>
-                        <ul>
-                            <li><a href="#">Help</a></li>
-                            <li><a href="#">FAQ's</a></li>
-                            <li><a href="#">Shipping</a></li>
-                            <li><a href="#">Tracking ID</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-12">
-                        <div class="under-footer">
-                            <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved. 
-
-                                <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-
+        
+        <jsp:include page="Footer.jsp"></jsp:include>
+        
         <!-- jQuery -->
         <script src="assets/js/jquery-2.1.0.min.js"></script>
 
