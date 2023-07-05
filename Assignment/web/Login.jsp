@@ -23,6 +23,9 @@
         <div id="logreg-forms">
             <form class="form-signin" action="login" method="post">
                 <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
+                <div class="alert alert-warning" role="alert">
+                    ${mess}
+                </div>
                 <input name="user" type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
                 <input name="pass" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
                 <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
@@ -84,6 +87,6 @@
             <script src="/script.js"></script>
             <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
             <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-            <<script src="assets/js/loginjs.js"></script>
+            <script src="assets/js/loginjs.js"></script>
 </body>
 </html>
