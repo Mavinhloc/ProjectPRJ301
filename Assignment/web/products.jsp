@@ -38,55 +38,8 @@
         </div>  
         <!-- ***** Preloader End ***** -->
 
-
-        <!-- ***** Header Area Start ***** -->
-        <header class="header-area header-sticky">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <nav class="main-nav">
-                            <!-- ***** Logo Start ***** -->
-                            <a href="index.jsp" class="logo">
-                                <img src="assets/images/logo1.png">
-                            </a>
-                            <!-- ***** Logo End ***** -->
-                            <!-- ***** Menu Start ***** -->
-                            <ul class="nav">
-                                <li class="scroll-to-section"><a href="index.html" class="active">Home</a></li>
-                                <li class="scroll-to-section"><a href="index.html">Men's</a></li>
-                                <li class="scroll-to-section"><a href="index.html">Women's</a></li>
-                                <li class="scroll-to-section"><a href="index.html">Kid's</a></li>
-                                <li class="submenu">
-                                    <a href="javascript:;">Pages</a>
-                                    <ul>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="products.html">Products</a></li>
-                                        <li><a href="single-product.html">Single Product</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu">
-                                    <a href="javascript:;">Features</a>
-                                    <ul>
-                                        <li><a href="#">Features Page 1</a></li>
-                                        <li><a href="#">Features Page 2</a></li>
-                                        <li><a href="#">Features Page 3</a></li>
-                                        <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
-                                    </ul>
-                                </li>
-                                <li class="scroll-to-section"><a href="index.html">Explore</a></li>
-                            </ul>        
-                            <a class='menu-trigger'>
-                                <span>Menu</span>
-                            </a>
-                            <!-- ***** Menu End ***** -->
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- ***** Header Area End ***** -->
-
+        <jsp:include page="Header.jsp"></jsp:include>
+        
         <!-- ***** Main Banner Area Start ***** -->
         <div class="page-heading" id="top">
             <div class="container">
@@ -114,14 +67,6 @@
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-lg-6">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Search products" aria-label="Search" aria-describedby="searchButton">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button" id="searchButton">Search</button>
-                            </div>
-                        </div>
-                    </div>
                     <div class="col-lg-6">
                         <div class="dropdown">
                             <button class="btn btn-primary dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

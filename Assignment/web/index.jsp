@@ -37,52 +37,8 @@
         <!-- ***** Preloader End ***** -->
 
 
-        <!-- ***** Header Area Start ***** -->
-        <header class="header-area header-sticky">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <nav class="main-nav">
-                            <!-- ***** Logo Start ***** -->
-                            <a href="index.jsp" class="logo">
-                                <img src="assets/images/logo1.png">
-                            </a>
-                            <!-- ***** Logo End ***** -->
-                            <!-- ***** Menu Start ***** -->
-                            <ul class="nav">
-                                <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
-                                <li class="scroll-to-section"><a href="#men">Men's</a></li>
-                                <li class="scroll-to-section"><a href="#women">Women's</a></li>
-                                <li class="scroll-to-section"><a href="#kids">Kid's</a></li>
-                                <li class="submenu">
-                                    <a href="javascript:;">Pages</a>
-                                    <ul>
-                                        <li><a href="about.jsp">About Us</a></li>
-                                        <li><a href="products.html">Products</a></li>
-                                        <li><a href="single-product.jsp">Single Product</a></li>
-                                        <li><a href="contact.jsp">Contact Us</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu">
-                                    <a href="javascript:;">Features</a>
-                                    <ul>
-                                        <li><a href="#">Features Page 1</a></li>
-                                        <li><a href="#">Features Page 2</a></li>
-                                        <li><a href="#">Features Page 3</a></li>
-                                    </ul>
-                                </li>
-                                <li class="scroll-to-section"><a href="#explore">Explore</a></li>
-                            </ul>        
-                            <a class='menu-trigger'>
-                                <span>Menu</span>
-                            </a>
-                            <!-- ***** Menu End ***** -->
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- ***** Header Area End ***** -->
+        <jsp:include page="Header.jsp"></jsp:include>
+
 
         <!-- ***** Main Banner Area Start ***** -->
         <div class="main-banner" id="top">
@@ -198,8 +154,8 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="section-heading">
-                            <h2>Men's Latest</h2>
-                            <span>Details to details is what makes Hexashop different from the other themes.</span>
+                            <h2>Latest Products</h2>
+                            <span>Our new product just had ben released</span>
                         </div>
                     </div>
                 </div>
