@@ -17,7 +17,7 @@ import jakarta.servlet.http.HttpServletResponse;
  *
  * @author ASUS
  */
-public class LoginControl extends HttpServlet {
+public class SignUpControl extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,17 +33,21 @@ public class LoginControl extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String username = request.getParameter("user");
-            String password = request.getParameter("pass");
-
-            DAO dao = new DAO();
-            Account a = dao.login(username, password);
-            if(a == null){
-                request.setAttribute("mess", "Wrong username or password");
-                request.getRequestDispatcher("Login.jsp").forward(request, response);
+            String user = request.getParameter("user");
+            String pass = request.getParameter("pass");
+            String repass = request.getParameter("repass");
+            if (!pass.equals(repass)) {
+                response.sendRedirect("Login.jsp");
             } else {
-                response.sendRedirect("home");
-            }
+                DAO dao = new DAO();
+                Account a = dao.checkExistAccount(user);
+                if (a == null) {
+                    dao.signup(user, pass);
+                    response.sendRedirect("home");
+                } else {
+                    response.sendRedirect("Login.jsp");
+                }
+            }            
         }
     }
 

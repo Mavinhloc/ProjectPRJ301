@@ -23,9 +23,7 @@
         <div id="logreg-forms">
             <form class="form-signin" action="login" method="post">
                 <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign in</h1>
-                <div class="alert alert-warning" role="alert">
-                    ${mess}
-                </div>
+                <p>${mess}</p>
                 <input name="user" type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
                 <input name="pass" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
                 <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
@@ -41,20 +39,10 @@
                 <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
             </form>
 
-            <form action="/signup/" class="form-signup">
-                <div class="social-login">
-                    <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign up with Facebook</span> </button>
-                </div>
-                <p style="text-align:center">OR</p>
-                <div class="social-login">
-                    <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign up with Google+</span> </button>
-                </div>
-
-
-                <input type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
-                <input type="email" id="user-email" class="form-control" placeholder="Email address" required autofocus="">
-                <input type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
-                <input type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
+            <form action="signup" method="post" class="form-signup">
+                <input name="user"type="text" id="user-name" class="form-control" placeholder="Full name" required="" autofocus="">
+                <input name="pass"type="password" id="user-pass" class="form-control" placeholder="Password" required autofocus="">
+                <input name="repass"type="password" id="user-repeatpass" class="form-control" placeholder="Repeat Password" required autofocus="">
 
                 <button class="btn btn-primary btn-block" type="submit"><i class="fas fa-user-plus"></i> Sign Up</button>
                 <a href="#" id="cancel_signup"><i class="fas fa-angle-left"></i> Back</a>
