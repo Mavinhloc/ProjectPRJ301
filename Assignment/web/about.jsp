@@ -12,7 +12,7 @@
         <meta name="author" content="">
         <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-        <title>Hexashop - About Page</title>
+        <title> About Page</title>
 
 
         <!-- Additional CSS Files -->
@@ -25,13 +25,7 @@
         <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
         <link rel="stylesheet" href="assets/css/lightbox.css">
-        <!--
-        
-        TemplateMo 571 Hexashop
-        
-        https://templatemo.com/tm-571-hexashop
-        
-        -->
+
     </head>
 
     <body>
@@ -57,7 +51,7 @@
                         <div class="col-lg-12">
                             <div class="inner-content">
                                 <h2>About Our Company</h2>
-                                <span>Awesome, clean &amp; creative HTML5 Template</span>
+                                <span></span>
                             </div>
                         </div>
                     </div>
