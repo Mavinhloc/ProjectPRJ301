@@ -35,7 +35,7 @@
                         <li class="scroll-to-section"><a href="index.jsp">Explore</a></li>
                         <li class="search-form">
                             <form action="search" method="post">
-                                <input type="text" id="search-input" name="txt" placeholder="Search...">
+                                <input type="text" id="search-input" name="txt" value="${searchValue}" placeholder="Search...">
                                 <button type="submit">
                                     <i class="fa fa-search"></i>
                                 </button>

@@ -35,6 +35,7 @@ public class SearchControl extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            request.setCharacterEncoding("UTF-8");
             String txtSearch = request.getParameter("txt");
             DAO dao = new DAO();
             List<Product> list = dao.searchByName(txtSearch);
@@ -42,6 +43,7 @@ public class SearchControl extends HttpServlet {
 
             request.setAttribute("listP", list);
             request.setAttribute("listC", listC);
+            request.setAttribute("searchValue", txtSearch);
             request.getRequestDispatcher("products.jsp").forward(request, response);
 
         }
