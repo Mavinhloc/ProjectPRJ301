@@ -42,29 +42,29 @@
 
         <jsp:include page="Header.jsp"></jsp:include>
 
-        <!-- ***** Main Banner Area Start ***** -->
-        <div class="page-heading" id="top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="inner-content">
-                            <h2>Single Product Page</h2>
-                            <span>Mavinhloc</span>
+            <!-- ***** Main Banner Area Start ***** -->
+            <div class="page-heading" id="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="inner-content">
+                                <h2>Single Product Page</h2>
+                                <span>Mavinhloc</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- ***** Main Banner Area End ***** -->
+            <!-- ***** Main Banner Area End ***** -->
 
 
-        <!-- ***** Product Area Starts ***** -->
-        <section class="section" id="product">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <div class="left-images">
-                            <img src="${detail.image}" alt="">
+            <!-- ***** Product Area Starts ***** -->
+            <section class="section" id="product">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="left-images">
+                                <img src="${detail.image}" alt="">
                         </div>
                     </div>
                     <div class="col-lg-4">

@@ -47,7 +47,7 @@
                     <div class="col-lg-12">
                         <div class="inner-content">
                             <h2>Check Our Products</h2>
-                            <span>Awesome &amp; Creative HTML CSS layout by TemplateMo</span>
+                            <span>Text</span>
                         </div>
                     </div>
                 </div>
@@ -58,16 +58,16 @@
         <!-- ***** Category Area Starts ***** -->
         <section class="section category-section" id="categories">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-heading">
+                <div class="row justify-content-center">
+                    <div class="">
+                        <div class="section-heading justify-content-center">
                             <h2>Shop by Category</h2>
-                            <span>Explore our product categories.</span>
+                            <span>Explore our product categories even further </span>
                         </div>
                     </div>
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-lg-6">
+                    <div class="">
                         <div class="dropdown">
                             <button class="btn btn-primary dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Category
