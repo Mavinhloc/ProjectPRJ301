@@ -39,10 +39,15 @@
                             </ul>
                         </li>
                         <li class="submenu">
-                            <a href="javascript:;">Features</a>
+                            <a href="javascript:;">Manage</a>
                             <ul>
-                                <li><a href="#">Features Page 1</a></li>
-                                <li><a href="#">Features Page 2</a></li>
+                                <c:if test="${sessionScope.acc.isSell == 1}">
+                                    <li><a href="#">Products</a></li>
+                                    </c:if>
+
+                                <c:if test="${sessionScope.acc.isAdmin == 1}">
+                                    <li><a href="#">Account</a></li>
+                                    </c:if>               
                                 <li><a href="#">Features Page 3</a></li>
                             </ul>
                         </li>
