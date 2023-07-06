@@ -15,12 +15,12 @@
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                         <c:if test="${sessionScope.acc} == null">
-                            <li class="scroll-to-section">
+                            <li>
                                 <a href="Login.jsp">Login</a>
                             </li>
                             </c:if>
                         <c:if test="${sessionScope.acc} != null">
-                            <li class="scroll-to-section">
+                            <li>
                                 <a href="index.jsp">Logout</a>
                             </li>
                             </c:if>
