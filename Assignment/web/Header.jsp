@@ -12,10 +12,9 @@
                             <!-- ***** Logo End ***** -->
                             <!-- ***** Menu Start ***** -->
                             <ul class="nav">
-                                <li class="scroll-to-section"><a href="Login.jsp" class="active">Login</a></li>
+                                <li class="scroll-to-section"><a href="Login.jsp">Login</a></li>
                                 <li class="scroll-to-section"><a href="index.jsp">Men's</a></li>
                                 <li class="scroll-to-section"><a href="index.jsp">Women's</a></li>
-                                <li class="scroll-to-section"><a href="index.jsp">Kid's</a></li>
                                 <li class="submenu">
                                     <a href="javascript:;">Pages</a>
                                     <ul>
