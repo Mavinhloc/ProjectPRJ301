@@ -16,8 +16,11 @@
                     <ul class="nav">
                         <c:choose>
                             <c:when test="${sessionScope.acc != null}">
+                                <li class="nav-item">
+                                    Hello ${sessionScope.acc.username}
+                                </li>
                                 <li>
-                                    <a href="index.jsp">Logout</a>
+                                    <a href="logout">Logout</a>
                                 </li>
                             </c:when>
                             <c:otherwise>
@@ -43,7 +46,6 @@
                                 <li><a href="#">Features Page 3</a></li>
                             </ul>
                         </li>
-                        <li class="scroll-to-section"><a href="index.jsp">Explore</a></li>
                         <li class="search-form">
                             <form action="search" method="post">
                                 <input type="text" id="search-input" name="txt" value="${searchValue}" placeholder="Search...">
