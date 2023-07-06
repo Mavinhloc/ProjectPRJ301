@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!-- ***** Header Area Start ***** -->
 <header class="header-area header-sticky">
     <div class="container">
@@ -13,12 +14,15 @@
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                        <c:if test="${sessionScope.acc} == null ">
-                            <li class="scroll-to-section"><a href="Login.jsp">Login</a></li>
+                        <c:if test="${sessionScope.acc} == null">
+                            <li class="scroll-to-section">
+                                <a href="Login.jsp">Login</a>
+                            </li>
                             </c:if>
-
-                        <c:if test="${sessionScope.acc} != null ">
-                            <li class="scroll-to-section"><a href="index.jsp">Logout</a></li>
+                        <c:if test="${sessionScope.acc} != null">
+                            <li class="scroll-to-section">
+                                <a href="index.jsp">Logout</a>
+                            </li>
                             </c:if>
                         <li class="scroll-to-section"><a href="index.jsp">Women's</a></li>
                         <li class="submenu">
@@ -35,7 +39,6 @@
                                 <li><a href="#">Features Page 1</a></li>
                                 <li><a href="#">Features Page 2</a></li>
                                 <li><a href="#">Features Page 3</a></li>
-                                <li><a rel="nofollow" href="https://templatemo.com/page/4" target="_blank">Template Page 4</a></li>
                             </ul>
                         </li>
                         <li class="scroll-to-section"><a href="index.jsp">Explore</a></li>
