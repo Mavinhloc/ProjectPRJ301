@@ -12,6 +12,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 /**
  *
@@ -42,6 +43,8 @@ public class LoginControl extends HttpServlet {
                 request.setAttribute("mess", "Wrong username or password");
                 request.getRequestDispatcher("Login.jsp").forward(request, response);
             } else {
+                HttpSession session = request.getSession();
+                session.setAttribute("acc", a);
                 response.sendRedirect("home");
             }
         }
