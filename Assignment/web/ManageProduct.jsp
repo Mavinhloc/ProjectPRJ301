@@ -4,22 +4,25 @@
     Author     : ASUS
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Product CRUD</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     </head>
     <body>
         <h2>Product CRUD</h2>
+        <button class="">Add Product</button>
+        
 
         <table>
             <thead>
                 <tr>
                     <th><input type="checkbox" id="selectAll"></th>
-                    <th>Product ID</th>
+                    <th>ID</th>
                     <th>Product Name</th>
                     <th>Product Image</th>
                     <th>Price</th>
