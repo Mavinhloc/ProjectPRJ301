@@ -16,8 +16,6 @@
     <body>
         <h2>Product CRUD</h2>
         <button class="">Add Product</button>
-        
-
         <table>
             <thead>
                 <tr>
