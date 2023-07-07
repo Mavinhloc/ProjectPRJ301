@@ -210,6 +210,18 @@ public class DAO {
         return list;
     }
 
+    public void deleteProduct(String pid) {
+        String query = "delete from product\n"
+                + "where id = ?";
+        try {
+            conn = new DBContext().getConnection();//ket noi SQL
+            ps = conn.prepareStatement(query);
+            ps.setString(1, pid);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
     public static void main(String[] args) {
         DAO dao = new DAO();
         List<Product> list = dao.getAllProduct();

@@ -44,12 +44,12 @@
                     <tr>
                         <td><input type="checkbox" class="productCheckbox"></td>
                         <td>${o.id}</td>
-                        <td>${o.name}</td>
+                        <td><a href="detail?pid=${o.id}">${o.name}</a></td>
                         <td><img src="${o.image}" alt="Product 1" class="productImage"></td>
                         <td>${o.price} $</td>
                         <td>
-                            <button class="deleteButton"><i class="fas fa-times"></i></button>
-                            <button class="editButton"><i class="fas fa-pencil-alt"></i></button>
+                            <a href="delete?pid=${o.id}"><button class="deleteButton"><i class="fas fa-times"></i></button></a>
+                            <a href="#"><button class="editButton"><i class="fas fa-pencil-alt"></i></button></a>
                         </td>
                     </tr>
                 </c:forEach>
@@ -57,7 +57,7 @@
             </tbody>
         </table>
         <jsp:include page="Footer.jsp"></jsp:include>
-
+<i
 
         <script src="script.js"></script>
     </body>
