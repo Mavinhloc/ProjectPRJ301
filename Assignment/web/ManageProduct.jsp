@@ -15,7 +15,7 @@
     </head>
     <body>
         <h2>Product CRUD</h2>
-        <button class="">Add Product</button>
+        <button class="addProductButton">Add Product</button>
         <table>
             <thead>
                 <tr>

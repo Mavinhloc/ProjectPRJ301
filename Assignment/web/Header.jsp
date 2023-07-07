@@ -42,7 +42,7 @@
                             <a href="javascript:;">Manage</a>
                             <ul>
                                 <c:if test="${sessionScope.acc.isSell == 1}">
-                                    <li><a href="#">Products</a></li>
+                                    <li><a href="ManageProduct.jsp">Products</a></li>
                                     </c:if>
 
                                 <c:if test="${sessionScope.acc.isAdmin == 1}">
