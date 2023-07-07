@@ -29,7 +29,7 @@
                                 </li>
                             </c:otherwise>
                         </c:choose>
-                        <li class="scroll-to-section nav-item"><a href="index.jsp">Women's</a></li>
+                        <li class="scroll-to-section nav-item"><a href="index.jsp">...</a></li>
                         <li class="submenu">
                             <a href="javascript:;">Pages</a>
                             <ul>
