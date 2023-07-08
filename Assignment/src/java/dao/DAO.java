@@ -222,6 +222,24 @@ public class DAO {
         }
     }
 
+    public void insertProduct(String name, String image, String price, String title, String description, String category, int sid) {
+        String query = "INSERT INTO product ([name], [image], [price], [title], [description], [cateID], [sell_ID])\n"
+                + "VALUES (?,?,?,?,?,?,?)";
+        try {
+            conn = new DBContext().getConnection();//ket noi SQL
+            ps = conn.prepareStatement(query);
+            ps.setString(1, name);
+            ps.setString(2, image);
+            ps.setString(3, price);
+            ps.setString(4, title);
+            ps.setString(5, description);
+            ps.setString(6, category);
+            ps.setInt(7, sid);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
     public static void main(String[] args) {
         DAO dao = new DAO();
         List<Product> list = dao.getAllProduct();

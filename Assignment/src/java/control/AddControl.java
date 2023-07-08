@@ -5,12 +5,15 @@
 
 package control;
 
+import dao.DAO;
+import entity.Account;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 /**
  *
@@ -28,6 +31,7 @@ public class AddControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             String name = request.getParameter("name");
@@ -36,6 +40,13 @@ public class AddControl extends HttpServlet {
             String title = request.getParameter("title");
             String description = request.getParameter("description");
             String category = request.getParameter("category");
+            
+            HttpSession session = request.getSession();
+            Account a = (Account) session.getAttribute("acc");
+            int sid = a.getId();
+            DAO dao = new DAO();
+            dao.insertProduct(name, image, price, title, description, category, sid); 
+            response.sendRedirect("manager");
         }
     } 
 
