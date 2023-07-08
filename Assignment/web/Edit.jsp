@@ -25,18 +25,11 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
         <link href="assets/css/manager.css" rel="stylesheet" type="text/css"/>
 
     <body>
-        <jsp:include page="Header.jsp"></jsp:include>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
             <div class="container">
 
                 <div id="editEmployeeModal">
@@ -89,8 +82,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
 
 
         <script src="assets/js/manager.js" type="text/javascript"></script>

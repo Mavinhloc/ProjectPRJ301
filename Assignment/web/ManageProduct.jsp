@@ -53,7 +53,7 @@
                         <td>${o.price} $</td>
                         <td>
                             <a href="delete?pid=${o.id}"><button class="deleteButton"><i class="fas fa-times"></i></button></a>
-                            <a href="Edit.jsp"><button class="editButton"><i class="fas fa-pencil-alt"></i></button></a>
+                            <a href="loadProduct?pid=${o.id}"><button class="editButton"><i class="fas fa-pencil-alt"></i></button></a>
                         </td>
                     </tr>
                 </c:forEach>
