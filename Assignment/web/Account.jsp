@@ -47,11 +47,11 @@
                 <tbody>
                 <c:forEach items="${listA}" var="o">
                     <tr>
-                        <td>1</td>
-                        <td>JohnDoe</td>
-                        <td>********</td>
-                        <td>Yes</td>
-                        <td>No</td>
+                        <td>${o.id}</td>
+                        <td>${o.username}</td>
+                        <td>${o.password}</td>
+                        <td>${o.isSell}</td>
+                        <td>${o.isAdmin}</td>
                         <td>
                             <button class="edit-button">Edit</button>
                             <button class="delete-button">Delete</button>

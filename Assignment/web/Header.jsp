@@ -46,7 +46,7 @@
                                     </c:if>
 
                                 <c:if test="${sessionScope.acc.isAdmin == 1}">
-                                    <li><a href="Account.jsp">Account</a></li>
+                                    <li><a href="account">Account</a></li>
                                     </c:if>               
                                 <li><a href="#">Features Page 3</a></li>
                             </ul>

@@ -52,6 +52,10 @@
         <servlet-name>LoadMoreControl</servlet-name>
         <servlet-class>control.LoadMoreControl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AccountControl</servlet-name>
+        <servlet-class>control.AccountControl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeControl</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -103,6 +107,10 @@
     <servlet-mapping>
         <servlet-name>LoadMoreControl</servlet-name>
         <url-pattern>/load</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AccountControl</servlet-name>
+        <url-pattern>/account</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
