@@ -17,12 +17,18 @@
 <link rel="stylesheet" href="assets/css/lightbox.css">
 
 <link rel="stylesheet" type="text/css" href="assets/css/cart.css"/>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
         <title>User Management</title>
-        <!-- Include your CSS stylesheets here -->
-        <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <jsp:include page="Header.jsp"></jsp:include>
@@ -33,7 +39,7 @@
             <br>
             <br>
             <h1>User Management</h1>
-            <table>
+            <table class="table">
                 <thead>
                     <tr>
                         <th>User ID</th>
@@ -53,8 +59,8 @@
                         <td>${o.isSell}</td>
                         <td>${o.isAdmin}</td>
                         <td>
-                            <button class="edit-button">Edit</button>
-                            <button class="delete-button">Delete</button>
+                            <a href="#editModal"  class="btn" data-bs-toggle="modal"><button class="edit-button btn btn-primary">Edit</button></a>
+                            <a href="deleteAccount?aid=${o.id}"><button class="delete-button btn btn-danger">Delete</button></a>
                         </td>
                     </tr>
                 </c:forEach>
@@ -62,31 +68,49 @@
         </table>
 
         <!-- Edit Modal -->
-        <div id="editModal" class="modal">
-            <div class="modal-content">
-                <h2>Edit User</h2>
-                <form>
-                    <label for="edit-username">Username:</label>
-                    <input type="text" id="edit-username" name="edit-username" required>
+        <div id="editModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2 class="modal-title">Edit User</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for="edit-username" class="form-label">Username:</label>
+                                <input type="text" id="edit-username" name="edit-username" class="form-control" required>
+                            </div>
 
-                    <label for="edit-password">Password:</label>
-                    <input type="password" id="edit-password" name="edit-password" required>
+                            <div class="mb-3">
+                                <label for="edit-password" class="form-label">Password:</label>
+                                <input type="password" id="edit-password" name="edit-password" class="form-control" required>
+                            </div>
 
-                    <label for="edit-seller">Seller:</label>
-                    <input type="checkbox" id="edit-seller" name="edit-seller">
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" id="edit-seller" name="edit-seller" class="form-check-input">
+                                <label for="edit-seller" class="form-check-label">Seller</label>
+                            </div>
 
-                    <label for="edit-admin">Admin:</label>
-                    <input type="checkbox" id="edit-admin" name="edit-admin">
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" id="edit-admin" name="edit-admin" class="form-check-input">
+                                <label for="edit-admin" class="form-check-label">Admin</label>
+                            </div>
 
-                    <button type="submit">Save</button>
-                    <button class="cancel-button">Cancel</button>
-                </form>
+                            <button type="submit" class="btn btn-primary">Save</button>
+                            <button type="button" class="btn btn-secondary cancel-button" data-bs-dismiss="modal">Cancel</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
+
         <jsp:include page="Footer.jsp"></jsp:include>
 
-
+        <!-- Include Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Include your JavaScript code here -->
         <script src="script.js"></script>
     </body>
 </html>
+

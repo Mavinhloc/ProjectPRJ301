@@ -287,6 +287,18 @@ public class DAO {
         } catch (Exception e) {
         }
     }
+    
+    public void deleteAccount(String aid) {
+        String query = "delete from Account\n"
+                + "where uID = ?";
+        try {
+            conn = new DBContext().getConnection();//ket noi SQL
+            ps = conn.prepareStatement(query);
+            ps.setString(1, aid);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
 
     public void insertProduct(String name, String image, String price, String title, String description, String category, int sid) {
         String query = "INSERT INTO product ([name], [image], [price], [title], [description], [cateID], [sell_ID])\n"

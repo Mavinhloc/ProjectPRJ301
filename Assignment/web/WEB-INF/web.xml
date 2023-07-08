@@ -56,6 +56,10 @@
         <servlet-name>AccountControl</servlet-name>
         <servlet-class>control.AccountControl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteAccountControl</servlet-name>
+        <servlet-class>control.DeleteAccountControl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeControl</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -111,6 +115,10 @@
     <servlet-mapping>
         <servlet-name>AccountControl</servlet-name>
         <url-pattern>/account</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteAccountControl</servlet-name>
+        <url-pattern>/deleteAccount</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
