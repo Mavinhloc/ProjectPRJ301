@@ -287,7 +287,7 @@ public class DAO {
         } catch (Exception e) {
         }
     }
-    
+
     public void deleteAccount(String aid) {
         String query = "delete from Account\n"
                 + "where uID = ?";
@@ -298,6 +298,27 @@ public class DAO {
             ps.executeUpdate();
         } catch (Exception e) {
         }
+    }
+
+    public Account getAllAccountByID(String id) {
+        String query = "select * from Account\n"
+                + "where [uID] = ?";
+        try {
+            conn = new DBContext().getConnection();//ket noi SQL
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Account(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getInt(4),
+                        rs.getInt(5)
+                );
+            }
+        } catch (Exception e) {
+        }
+        return null;
     }
 
     public void insertProduct(String name, String image, String price, String title, String description, String category, int sid) {

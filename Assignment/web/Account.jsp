@@ -76,15 +76,19 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form action="editAccount" method="post">
+                        <form items="${listA}" action="editAccount?aid=${o.id}" method="post">
+                            <div class="mb-3">
+                                <label for="edit-username" class="form-label">User ID:</label>
+                                <input value="${detail.id}" type="text" id="edit-username" name="id" class="form-control"readonly required>
+                            </div>
                             <div class="mb-3">
                                 <label for="edit-username" class="form-label">Username:</label>
-                                <input type="text" id="edit-username" name="username" class="form-control" required>
+                                <input value="${detail.username}" type="text" id="edit-username" name="username" class="form-control" required>
                             </div>
 
                             <div class="mb-3">
                                 <label for="edit-password" class="form-label">Password:</label>
-                                <input type="password" id="edit-password" name="password" class="form-control" required>
+                                <input value="${detail.password}" type="password" id="edit-password" name="password" class="form-control" required>
                             </div>
 
                             <div class="mb-3 form-check">
