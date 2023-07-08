@@ -76,24 +76,24 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
-                        <form>
+                        <form action="editAccount" method="post">
                             <div class="mb-3">
                                 <label for="edit-username" class="form-label">Username:</label>
-                                <input type="text" id="edit-username" name="edit-username" class="form-control" required>
+                                <input type="text" id="edit-username" name="username" class="form-control" required>
                             </div>
 
                             <div class="mb-3">
                                 <label for="edit-password" class="form-label">Password:</label>
-                                <input type="password" id="edit-password" name="edit-password" class="form-control" required>
+                                <input type="password" id="edit-password" name="password" class="form-control" required>
                             </div>
 
                             <div class="mb-3 form-check">
-                                <input type="checkbox" id="edit-seller" name="edit-seller" class="form-check-input">
+                                <input type="checkbox" id="edit-seller" name="isSell" class="form-check-input">
                                 <label for="edit-seller" class="form-check-label">Seller</label>
                             </div>
 
                             <div class="mb-3 form-check">
-                                <input type="checkbox" id="edit-admin" name="edit-admin" class="form-check-input">
+                                <input type="checkbox" id="edit-admin" name="isAdmin" class="form-check-input">
                                 <label for="edit-admin" class="form-check-label">Admin</label>
                             </div>
 

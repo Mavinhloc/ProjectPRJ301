@@ -31,7 +31,6 @@
 
     <body>
             <div class="container">
-
                 <div id="editEmployeeModal">
                     <div class="modal-dialog">
                         <div class="modal-content">
