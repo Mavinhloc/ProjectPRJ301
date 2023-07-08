@@ -36,6 +36,10 @@
         <servlet-name>DeleteControl</servlet-name>
         <servlet-class>control.DeleteControl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddControl</servlet-name>
+        <servlet-class>control.AddControl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeControl</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -71,6 +75,10 @@
     <servlet-mapping>
         <servlet-name>DeleteControl</servlet-name>
         <url-pattern>/delete</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddControl</servlet-name>
+        <url-pattern>/add</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

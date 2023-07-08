@@ -105,8 +105,8 @@
                             <div class="form-group">
                                 <label>Category</label>
                                 <select name="category" class="form-select" aria-label="Default select example">
-                                    <c:forEach begin="1" end="3" var="o">
-                                        <option value="1">Giày Adidas</option>
+                                    <c:forEach items="${listC}" var="o">
+                                        <option value="${o.cid}">${o.cname}</option>
                                     </c:forEach>
                                 </select>
                             </div>
