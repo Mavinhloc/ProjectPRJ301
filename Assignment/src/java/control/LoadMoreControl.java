@@ -5,12 +5,10 @@
 package control;
 
 import dao.DAO;
-import entity.Category;
 import entity.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -20,8 +18,7 @@ import java.util.List;
  *
  * @author ASUS
  */
-@WebServlet(name = "HomeControl", urlPatterns = {"/home"})
-public class HomeControl extends HttpServlet {
+public class LoadMoreControl extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,17 +32,32 @@ public class HomeControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            //Get data
-            DAO dao = new DAO();
-            List<Product> list = dao.getAllProduct(); //dung dao.getTop3(); de lay 3 san pham dung ajax
-            List<Category> listC = dao.getAllCategory();
+        String amount = request.getParameter("exist");
+        int iamount = Integer.parseInt(amount);
+        DAO dao = new DAO();
+        List<Product> list = dao.getNext3Product(iamount);
+        PrintWriter out = response.getWriter();
 
-            //Set data
-            request.setAttribute("listP", list);
-            request.setAttribute("listC", listC);
-            request.getRequestDispatcher("products.jsp").forward(request, response);
+        for (Product o : list) {
+            out.println("<div class=\"product col-lg-4\">\n"
+                    + "                            <div class=\"item\">\n"
+                    + "                                <div class=\"thumb\">\n"
+                    + "                                    <div class=\"hover-content\">\n"
+                    + "                                        <ul>\n"
+                    + "                                            <li><a href=\"single-product.jsp\"><i class=\"fa fa-eye\"></i></a></li>\n"
+                    + "                                            <li><a href=\"single-product.jsp\"><i class=\"fa fa-star\"></i></a></li>\n"
+                    + "                                            <li><a href=\"single-product.jsp\"><i class=\"fa fa-shopping-cart\"></i></a></li>\n"
+                    + "                                        </ul>\n"
+                    + "                                    </div>\n"
+                    + "                                    <img src=\""+o.getImage()+"\" alt=\"\">\n"
+                    + "                                </div>\n"
+                    + "                                <div class=\"down-content\">\n"
+                    + "                                    <h4><a href=\"detail?pid="+o.getId()+"\">"+o.getName()+"</a></h4>\n"
+                    + "                                    <span>"+o.getPrice()+" $</span>\n"
+                    + "                                    <h5>"+o.getTitle()+"</h5>\n"
+                    + "                                </div>\n"
+                    + "                            </div>\n"
+                    + "                        </div>");
         }
     }
 

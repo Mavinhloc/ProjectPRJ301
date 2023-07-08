@@ -39,40 +39,40 @@
         <!-- ***** Preloader End ***** -->
 
         <jsp:include page="Header.jsp"></jsp:include>
-        
-        <!-- ***** Main Banner Area Start ***** -->
-        <div class="page-heading" id="top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="inner-content">
-                            <h2>Check Our Products</h2>
-                            <span>Text</span>
+
+            <!-- ***** Main Banner Area Start ***** -->
+            <div class="page-heading" id="top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="inner-content">
+                                <h2>Check Our Products</h2>
+                                <span>Text</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- ***** Main Banner Area End ***** -->
+            <!-- ***** Main Banner Area End ***** -->
 
-        <!-- ***** Category Area Starts ***** -->
-        <section class="section category-section" id="categories">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="">
-                        <div class="section-heading justify-content-center">
-                            <h2>Shop by Category</h2>
-                            <span>Explore our product categories even further </span>
+            <!-- ***** Category Area Starts ***** -->
+            <section class="section category-section" id="categories">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="">
+                            <div class="section-heading justify-content-center">
+                                <h2>Shop by Category</h2>
+                                <span>Explore our product categories even further </span>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row justify-content-center">
-                    <div class="">
-                        <div class="dropdown">
-                            <button class="btn btn-primary dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Category
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="categoryDropdown"> 
+                    <div class="row justify-content-center">
+                        <div class="">
+                            <div class="dropdown">
+                                <button class="btn btn-primary dropdown-toggle" type="button" id="categoryDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Category
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="categoryDropdown"> 
                                 <c:forEach items="${listC}" var="o">
                                     <a class="dropdown-item ${tag == o.cid ? "active" : ""}" href="category?cid=${o.cid}">${o.cname}</a>
                                 </c:forEach>
@@ -99,9 +99,9 @@
                 </div>
             </div>
             <div class="container">
-                <div class="row">
+                <div id="content" class="row">
                     <c:forEach items="${listP}" var="o">
-                        <div class="col-lg-4">
+                        <div class="product col-lg-4">
                             <div class="item">
                                 <div class="thumb">
                                     <div class="hover-content">
@@ -122,7 +122,7 @@
                         </div>
                     </c:forEach>
                 </div>
-
+                <!-- <button onclick="loadMore()" class="btn btn-primary">Load More</button> -->
 
                 <%--Chuyen trang --%>
                 <div class="col-lg-12">
@@ -150,9 +150,9 @@
 
         </section>
         <!-- ***** Products Area Ends ***** -->
-        
+
         <jsp:include page="Footer.jsp"></jsp:include>
-        
+
         <!-- jQuery -->
         <script src="assets/js/jquery-2.1.0.min.js"></script>
 
@@ -174,25 +174,45 @@
 
         <!-- Global Init -->
         <script src="assets/js/custom.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
         <script>
 
-            $(function () {
-                var selectedClass = "";
-                $("p").click(function () {
-                    selectedClass = $(this).attr("data-rel");
-                    $("#portfolio").fadeTo(50, 0.1);
-                    $("#portfolio div").not("." + selectedClass).fadeOut();
-                    setTimeout(function () {
-                        $("." + selectedClass).fadeIn();
-                        $("#portfolio").fadeTo(50, 1);
-                    }, 500);
+                    $(function () {
+                        var selectedClass = "";
+                        $("p").click(function () {
+                            selectedClass = $(this).attr("data-rel");
+                            $("#portfolio").fadeTo(50, 0.1);
+                            $("#portfolio div").not("." + selectedClass).fadeOut();
+                            setTimeout(function () {
+                                $("." + selectedClass).fadeIn();
+                                $("#portfolio").fadeTo(50, 1);
+                            }, 500);
 
-                });
-            });
+                        });
+                    });
 
         </script>
 
+        <script>
+            function loadMore() {
+                var amount = document.getElementsByClassName("product").length;
+                $.ajax({
+                    url: "/Assignment/load",
+                    type: "get", //send it through get method
+                    data: {
+                        exist: amount
+                    },
+                    success: function (data) {
+                        var row = document.getElementById("content");
+                        row.innerHTML += data;
+                    },
+                    error: function (xhr) {
+                        //Do Something to handle error
+                    }
+                });
+            }
+        </script>
     </body>
 
 </html>
