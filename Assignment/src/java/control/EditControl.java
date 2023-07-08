@@ -32,6 +32,7 @@ public class EditControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        response.setCharacterEncoding("UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             String pid = request.getParameter("id");
@@ -44,6 +45,7 @@ public class EditControl extends HttpServlet {
 
             DAO dao = new DAO();
             dao.editProduct(name, image, price, title, description, category, pid);
+            response.sendRedirect("manager");
         }
     }
 

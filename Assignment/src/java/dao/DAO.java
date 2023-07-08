@@ -247,7 +247,7 @@ public class DAO {
                 + "[price] = ?,\n"
                 + "[title] = ?,\n"
                 + "[description] = ?,\n"
-                + "cateID = ?,\n"
+                + "cateID = ?\n"
                 + "where id = ?";
         try {
             conn = new DBContext().getConnection();//ket noi SQL
