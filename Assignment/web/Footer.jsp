@@ -9,18 +9,18 @@
                         <img src="assets/images/black-logo.png" alt="hexashop ecommerce templatemo">
                     </div>
                     <ul>
-                        <li><a href="#">16501 Collins Ave, Sunny Isles Beach, FL 33160, United States</a></li>
-                        <li><a href="#">hexashop@company.com</a></li>
-                        <li><a href="#">010-020-0340</a></li>
+                        <li><a href="#">Address</a></li>
+                        <li><a href="#">Locmvhe171883@fpt.edu.vn</a></li>
+                        <li><a href="#">0583450457</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-lg-3">
                 <h4>Shopping &amp; Categories</h4>
                 <ul>
-                    <li><a href="#">Men?s Shopping</a></li>
-                    <li><a href="#">Women?s Shopping</a></li>
-                    <li><a href="#">Kid's Shopping</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">...</a></li>
+                    <li><a href="#">...</a></li>
                 </ul>
             </div>
             <div class="col-lg-3">
@@ -43,9 +43,8 @@
             </div>
             <div class="col-lg-12">
                 <div class="under-footer">
-                    <p>Copyright © 2022 HexaShop Co., Ltd. All Rights Reserved. 
+                    <p>Copyright © 2022 Mavinhloc Co. Ltd. All Rights Reserved. 
 
-                        <br>Design: <a href="https://templatemo.com" target="_parent" title="free css templates">TemplateMo</a></p>
                     <ul>
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
