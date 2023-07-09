@@ -6,7 +6,7 @@
             <div class="col-lg-3">
                 <div class="first-item">
                     <div class="logo">
-                        <img src="assets/images/black-logo.png" alt="hexashop ecommerce templatemo">
+                        <img src="assets/images/black-logo.png" alt="">
                     </div>
                     <ul>
                         <li><a href="#">Address</a></li>

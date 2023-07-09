@@ -59,55 +59,13 @@
                         <td>${o.isSell}</td>
                         <td>${o.isAdmin}</td>
                         <td>
-                            <a href="#editModal"  class="btn" data-bs-toggle="modal"><button class="edit-button btn btn-primary">Edit</button></a>
+                            <a href="loadAccount?aid=${o.id}"  class="btn"><button class="edit-button btn btn-primary">Edit</button></a>
                             <a href="deleteAccount?aid=${o.id}"><button class="delete-button btn btn-danger">Delete</button></a>
                         </td>
                     </tr>
                 </c:forEach>
             </tbody>
         </table>
-
-        <!-- Edit Modal -->
-        <div id="editModal" class="modal fade">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h2 class="modal-title">Edit User</h2>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <form items="${listA}" action="editAccount?aid=${o.id}" method="post">
-                            <div class="mb-3">
-                                <label for="edit-username" class="form-label">User ID:</label>
-                                <input value="${detail.id}" type="text" id="edit-username" name="id" class="form-control"readonly required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="edit-username" class="form-label">Username:</label>
-                                <input value="${detail.username}" type="text" id="edit-username" name="username" class="form-control" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="edit-password" class="form-label">Password:</label>
-                                <input value="${detail.password}" type="password" id="edit-password" name="password" class="form-control" required>
-                            </div>
-
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" id="edit-seller" name="isSell" class="form-check-input">
-                                <label for="edit-seller" class="form-check-label">Seller</label>
-                            </div>
-
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" id="edit-admin" name="isAdmin" class="form-check-input">
-                                <label for="edit-admin" class="form-check-label">Admin</label>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary">Save</button>
-                            <button type="button" class="btn btn-secondary cancel-button" data-bs-dismiss="modal">Cancel</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <jsp:include page="Footer.jsp"></jsp:include>
 

@@ -363,6 +363,26 @@ public class DAO {
         }
     }
 
+    public void editAccount(String username, String password, String isSell, String isAdmin, String aid) {
+        String query = "UPDATE [dbo].[Account]\n"
+                + "   SET [user] = ?\n"
+                + "      ,[pass] = ?\n"
+                + "      ,[isSell] = ?\n"
+                + "      ,[isAdmin] = ?\n"
+                + " WHERE [uID] = ?";
+        try {
+            conn = new DBContext().getConnection();//ket noi SQL
+            ps = conn.prepareStatement(query);
+            ps.setString(1, username);
+            ps.setString(2, password);
+            ps.setString(3, isSell);
+            ps.setString(4, isAdmin);
+            ps.setString(5, aid);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
     public static void main(String[] args) {
         DAO dao = new DAO();
         List<Product> list = dao.getAllProduct();
