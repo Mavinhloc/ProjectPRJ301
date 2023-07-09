@@ -87,6 +87,7 @@
 
                         <div class="row py-5 p-4 bg-white rounded shadow-sm">
                             <div class="col-lg-6">
+                                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold"><a style="color: black"href="home">Continue to Shopping</a></div>
                                 <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Voucher</div>
                                 <div class="p-4">
                                     <div class="input-group mb-4 border rounded-pill p-2">
