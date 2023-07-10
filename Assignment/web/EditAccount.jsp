@@ -41,7 +41,7 @@
             </div>
 
             <button type="submit" id="save-button" class="btn btn-primary">Save</button>
-            <button type="button" class="btn btn-secondary cancel-button">Cancel</button>
+            <button type="button" class="btn btn-secondary cancel-button"><a href="account" style="color: red">Cancel</a></button>
         </form>
     </div>
 

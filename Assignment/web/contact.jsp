@@ -11,7 +11,7 @@
         <meta name="author" content="">
         <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-        <title>Hexashop - Contact Page</title>
+        <title>Contact Page</title>
 
 
         <!-- Additional CSS Files -->
@@ -72,7 +72,7 @@
                         <div class="col-lg-6">
                             <div class="section-heading">
                                 <h2>Say Hello. Don't Be Shy!</h2>
-                                <span>Details to details is what makes Hexashop different from the other themes.</span>
+                                <span></span>
                             </div>
                             <form id="contact" action="" method="post">
                                 <div class="row">
@@ -110,7 +110,7 @@
                         <div class="col-lg-8">
                             <div class="section-heading">
                                 <h2>By Subscribing To Our Newsletter You Can Get 30% Off</h2>
-                                <span>Details to details is what makes Hexashop different from the other themes.</span>
+                                <span></span>
                             </div>
                             <form id="subscribe" action="" method="get">
                                 <div class="row">
