@@ -21,6 +21,8 @@
 
         <link rel="stylesheet" href="assets/css/maincss.css">
 
+        <link rel="stylesheet" href="assets/css/active.css">
+
         <link rel="stylesheet" href="assets/css/owl-carousel.css">
 
         <link rel="stylesheet" href="assets/css/lightbox.css">
@@ -100,7 +102,7 @@
             </div>
             <div class="container">
                 <div id="content" class="row">
-                    <c:forEach items="${listP}" var="o">
+                    <c:forEach items="${pageP}" var="o">
                         <div class="product col-lg-4">
                             <div class="item">
                                 <div class="thumb">
@@ -128,21 +130,21 @@
                 <div class="col-lg-12">
                     <div class="pagination">
                         <ul>
-                            <li>
-                                <a href="#">1</a>
-                            </li>
-                            <li class="active">
-                                <a href="#">2</a>
-                            </li>
-                            <li>
-                                <a href="#">3</a>
-                            </li>
-                            <li>
-                                <a href="#">4</a>
-                            </li>
-                            <li>
-                                <a href="#">></a>
-                            </li>
+                            <c:if test="${tag != 1}">
+                                <li>
+                                    <a href="paging?index=${tag - 1}">Back</a>
+                                </li>
+                            </c:if>
+                            <c:forEach begin="1" end="${endP}" var="i">
+                                <li>
+                                    <a class=" paging ${tag == i?"active":""}"href="paging?index=${i}">${i}</a>                                  
+                                </li>
+                            </c:forEach>
+                            <c:if test="${tag != endP}">
+                                <li>
+                                    <a href="paging?index=${tag + 1}">Next</a>
+                                </li>
+                            </c:if>
                         </ul>
                     </div>
                 </div>
@@ -178,19 +180,19 @@
 
         <script>
 
-                    $(function () {
-                        var selectedClass = "";
-                        $("p").click(function () {
-                            selectedClass = $(this).attr("data-rel");
-                            $("#portfolio").fadeTo(50, 0.1);
-                            $("#portfolio div").not("." + selectedClass).fadeOut();
-                            setTimeout(function () {
-                                $("." + selectedClass).fadeIn();
-                                $("#portfolio").fadeTo(50, 1);
-                            }, 500);
+            $(function () {
+                var selectedClass = "";
+                $("p").click(function () {
+                    selectedClass = $(this).attr("data-rel");
+                    $("#portfolio").fadeTo(50, 0.1);
+                    $("#portfolio div").not("." + selectedClass).fadeOut();
+                    setTimeout(function () {
+                        $("." + selectedClass).fadeIn();
+                        $("#portfolio").fadeTo(50, 1);
+                    }, 500);
 
-                        });
-                    });
+                });
+            });
 
         </script>
 

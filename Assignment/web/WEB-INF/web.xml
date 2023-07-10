@@ -68,6 +68,10 @@
         <servlet-name>LoadAccountControl</servlet-name>
         <servlet-class>control.LoadAccountControl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PagingControl</servlet-name>
+        <servlet-class>control.PagingControl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeControl</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -135,6 +139,10 @@
     <servlet-mapping>
         <servlet-name>LoadAccountControl</servlet-name>
         <url-pattern>/loadAccount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PagingControl</servlet-name>
+        <url-pattern>/paging</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
