@@ -60,7 +60,7 @@
                         <td>${o.isAdmin}</td>
                         <td>
                             <a href="loadAccount?aid=${o.id}"  class="btn"><button class="edit-button btn btn-primary">Edit</button></a>
-                            <a href="deleteAccount?aid=${o.id}"><button class="delete-button btn btn-danger">Delete</button></a>
+                            <a href="deleteAccount?aid=${o.id}" onclick="return confirm('Are you sure you want to delete this item?')"><button class="delete-button btn btn-danger">Delete</button></a>
                         </td>
                     </tr>
                 </c:forEach>

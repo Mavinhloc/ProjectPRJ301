@@ -52,7 +52,7 @@
                         <td><img src="${o.image}" alt="Product 1" class="productImage"></td>
                         <td>${o.price} $</td>
                         <td>
-                            <a href="delete?pid=${o.id}"><button class="deleteButton"><i class="fas fa-times"></i></button></a>
+                            <a href="delete?pid=${o.id}" onclick="return confirm('Are you sure you want to delete this item?')"><button class="deleteButton"><i class="fas fa-times"></i></button></a>
                             <a href="loadProduct?pid=${o.id}"><button class="editButton"><i class="fas fa-pencil-alt"></i></button></a>
                         </td>
                     </tr>

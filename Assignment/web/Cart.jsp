@@ -56,27 +56,31 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            <c:forEach items="" var="o">
+                                            <c:set var="totalAmount" value="0" />
+                                            <c:forEach items="${listCart}" var="o">
                                                 <tr>
                                                     <th scope="row">
                                                         <div class="p-2">
-                                                            <img src="" alt="" width="70" class="img-fluid rounded shadow-sm">
+                                                            <img src="${o.image}" alt="" width="70" class="img-fluid rounded shadow-sm">
                                                             <div class="ml-3 d-inline-block align-middle">
-                                                                <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block"></a></h5><span class="text-muted font-weight-normal font-italic"></span>
+                                                                <h5 class="mb-0"> <a href="#" class="text-dark d-inline-block">${o.name}</a></h5><span class="text-muted font-weight-normal font-italic"></span>
                                                             </div>
                                                         </div>
                                                     </th>
-                                                    <td class="align-middle"><strong></strong></td>
+                                                    <td class="align-middle"><strong>${o.price}</strong></td>
                                                     <td class="align-middle">
-                                                        <a href="#"><button class="btnSub">-</button></a> 
-                                                        <strong>4</strong>
-                                                        <a href="#"><button class="btnAdd">+</button></a>
+                                                        <a href="#"><button class="btnSub btn btn-sm btn-outline-secondary">-</button></a>
+                                                        <strong class="quantity">${o.amount}</strong>
+                                                        <a href="#"><button class="btnAdd btn btn-sm btn-outline-secondary">+</button></a>
                                                     </td>
+
                                                     <td class="align-middle"><a href="#" class="text-dark">
-                                                            <button type="button" class="btn btn-danger">Delete</button>
+                                                            <a href="deleteCart?pid=${o.productID}" onclick="return confirm('Are you sure you want to delete this item?')"><button type="button" class="btn btn-danger">Delete</button></a>
                                                         </a>
                                                     </td>
-                                                </tr> 
+                                                </tr>
+                                                <c:set var="subtotal" value="${o.price * o.amount}" />
+                                                <c:set var="totalAmount" value="${totalAmount + subtotal}" />
                                             </c:forEach>
                                         </tbody>
                                     </table>
@@ -87,7 +91,7 @@
 
                         <div class="row py-5 p-4 bg-white rounded shadow-sm">
                             <div class="col-lg-6">
-                                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold"><a style="color: black"href="home">Continue to Shopping</a></div><br>
+                                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold"><a style="color: black"href="paging">Continue to Shopping</a></div><br>
                                 <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Voucher</div>
                                 <div class="p-4">
                                     <div class="input-group mb-4 border rounded-pill p-2">
@@ -102,7 +106,7 @@
                                 <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Thành tiền</div>
                                 <div class="p-4">
                                     <ul class="list-unstyled mb-4">
-                                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tổng tiền hàng</strong><strong>100 $</strong></li>
+                                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tổng tiền hàng</strong><strong>${totalAmount} $</strong></li>
                                         <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Phí vận chuyển</strong><strong>Free ship</strong></li>
                                         <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">VAT</strong><strong>10 $</strong></li>
                                         <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tổng thanh toán</strong>
@@ -124,5 +128,9 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </body>
 
+
+    <script>
+
+    </script>
 </html>
 </html>

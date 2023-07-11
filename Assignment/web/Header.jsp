@@ -29,7 +29,7 @@
                                 </li>
                             </c:otherwise>
                         </c:choose>
-                        <li class="scroll-to-section nav-item"><a href="Cart.jsp">Cart</a></li>
+                        <li class="scroll-to-section nav-item"><a href="showCart">Cart</a></li>
                         <li class="submenu">
                             <a href="javascript:;">Pages</a>
                             <ul>

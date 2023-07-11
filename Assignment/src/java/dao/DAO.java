@@ -6,6 +6,7 @@ package dao;
 
 import context.DBContext;
 import entity.Account;
+import entity.Cart;
 import entity.Category;
 import entity.Product;
 import java.sql.Connection;
@@ -299,6 +300,18 @@ public class DAO {
         } catch (Exception e) {
         }
     }
+    
+    public void deleteCart(String cid) {
+        String query = "delete from Cart\n"
+                + "where ProductID = ?";
+        try {
+            conn = new DBContext().getConnection();//ket noi SQL
+            ps = conn.prepareStatement(query);
+            ps.setString(1, cid);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
 
     public Account getAllAccountByID(String id) {
         String query = "select * from Account\n"
@@ -419,6 +432,53 @@ public class DAO {
         } catch (Exception e) {
         }
         return list;
+    }
+
+    public void addToCart(int userID, int productID) {
+        String query = "INSERT INTO Cart "
+                + "(AccountID, ProductID, Amount)"
+                + " VALUES (?, ?, 1)";
+        try {
+            conn = new DBContext().getConnection();//ket noi SQL
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, userID);
+            ps.setInt(2, productID);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
+    public List<Cart> getAllProductInCart(int userID) {
+        List<Cart> cartItems = new ArrayList<>();
+        String query = "SELECT c.AccountID, c.ProductID, c.Amount, p.image, p.name, p.price "
+                + "FROM Cart c "
+                + "JOIN product p ON c.ProductID = p.id "
+                + "JOIN Account a ON c.AccountID = a.uID "
+                + "WHERE a.uID = ?";
+
+        try {
+            conn = new DBContext().getConnection();  // Get database connection
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, userID);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                int accountID = rs.getInt("AccountID");
+            int productID = rs.getInt("ProductID");
+            int amount = rs.getInt("Amount");
+            String image = rs.getString("image");
+            String name = rs.getString("name");
+            double price = rs.getDouble("price");
+
+            Cart cartItem = new Cart(accountID, productID, amount);
+            cartItem.setImage(image);
+            cartItem.setName(name);
+            cartItem.setPrice(price);
+            cartItems.add(cartItem);
+            }
+        } catch (Exception e) {
+        } 
+        return cartItems;
     }
 
     public static void main(String[] args) {
