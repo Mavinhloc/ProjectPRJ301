@@ -72,6 +72,10 @@
         <servlet-name>PagingControl</servlet-name>
         <servlet-class>control.PagingControl</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CartControl</servlet-name>
+        <servlet-class>control.CartControl</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeControl</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -143,6 +147,10 @@
     <servlet-mapping>
         <servlet-name>PagingControl</servlet-name>
         <url-pattern>/paging</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CartControl</servlet-name>
+        <url-pattern>/cart</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

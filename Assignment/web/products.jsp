@@ -110,7 +110,7 @@
                                         <ul>
                                             <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
                                             <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="cart?pid=${o.id}"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     <img src="${o.image}" alt="">
