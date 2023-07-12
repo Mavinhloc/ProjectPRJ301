@@ -34,7 +34,7 @@
                             <a href="javascript:;">Pages</a>
                             <ul>
                                 <li><a href="about.jsp">About Us</a></li>
-                                <li><a href="paging">Products</a></li>
+                                <li><a href="home">Products</a></li>
                                 <li><a href="contact.jsp">Contact Us</a></li>
                             </ul>
                         </li>

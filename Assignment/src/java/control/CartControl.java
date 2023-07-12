@@ -34,10 +34,11 @@ public class CartControl extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         int uid = Integer.parseInt(request.getParameter("userID"));
         int pid = Integer.parseInt(request.getParameter("productID"));
+        int quantity = Integer.parseInt(request.getParameter("quantity"));
         DAO dao = new DAO();
-        dao.addToCart(uid, pid);
-        //request.setAttribute("detail", p);
-        request.getRequestDispatcher("paging").forward(request, response);
+        dao.addToCart(uid, pid, quantity);
+        request.setAttribute("pid", pid);
+        request.getRequestDispatcher("home").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

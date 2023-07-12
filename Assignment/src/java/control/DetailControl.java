@@ -5,6 +5,7 @@
 package control;
 
 import dao.DAO;
+import entity.Account;
 import entity.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -12,6 +13,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 /**
  *
@@ -33,10 +35,14 @@ public class DetailControl extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            HttpSession session = request.getSession();
+            Account a = (Account) session.getAttribute("acc");
+            int uid = a.getId();
             String id = request.getParameter("pid");
             DAO dao = new DAO();
             Product p = dao.getAllProductById(id);
             request.setAttribute("detail", p);
+            request.setAttribute("uid", uid);
             request.getRequestDispatcher("Detail.jsp").forward(request, response);
 
         }

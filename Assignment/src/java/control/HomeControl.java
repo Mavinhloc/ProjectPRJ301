@@ -5,6 +5,7 @@
 package control;
 
 import dao.DAO;
+import entity.Account;
 import entity.Category;
 import entity.Product;
 import java.io.IOException;
@@ -14,6 +15,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.util.List;
 
 /**
@@ -38,6 +40,9 @@ public class HomeControl extends HttpServlet {
         try ( PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             //Get data
+            HttpSession session = request.getSession();
+            Account a = (Account) session.getAttribute("acc");
+            int id = a.getId();
             DAO dao = new DAO();
             List<Product> list = dao.getAllProduct(); //dung dao.getTop3(); de lay 3 san pham dung ajax
             List<Category> listC = dao.getAllCategory();
@@ -45,6 +50,7 @@ public class HomeControl extends HttpServlet {
             //Set data
             request.setAttribute("listP", list);
             request.setAttribute("listC", listC);
+            request.setAttribute("uid", id);
             request.getRequestDispatcher("products.jsp").forward(request, response);
         }
     }

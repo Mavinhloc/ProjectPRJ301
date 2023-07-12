@@ -72,21 +72,22 @@
                             <h4>${detail.name}</h4>
                             <span class="price">${detail.price} $</span>
                             <span>${detail.description}</span>
-                            <div class="quote">
-                                <i class="fa fa-quote-left"></i><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiuski smod.</p>
-                            </div>
                             <div class="quantity-content">
                                 <div class="left-content">
                                     <h6>No. of Orders</h6>
                                 </div>
                                 <div class="right-content">
-                                    <div class="quantity buttons_added">
-                                        <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
-                                    </div>
+                                    <form action="cart" method="GET">
+                                        <div class="quantity buttons_added">
+                                            <input type="button" value="-" class="minus">
+                                            <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
+                                            <input type="button" value="+" class="plus">
+                                            <input type="hidden" name="userID" value="${uid}">
+                                            <input type="hidden" name="productID" value="${detail.id}">
+                                            <input type="submit" value="Add To Cart" class="main-border-button">
+                                        </div>
+                                    </form>
                                 </div>
-                            </div>
-                            <div class="total">
-                                <div class="main-border-button"><a href="#">Add To Cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -94,6 +95,8 @@
             </div>
         </section>
         <!-- ***** Product Area Ends ***** -->
+
+
         <jsp:include page="Footer.jsp"></jsp:include>
 
         <!-- jQuery -->

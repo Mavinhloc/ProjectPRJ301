@@ -434,15 +434,16 @@ public class DAO {
         return list;
     }
 
-    public void addToCart(int userID, int productID) {
+    public void addToCart(int userID, int productID, int quantity) {
         String query = "INSERT INTO Cart "
                 + "(AccountID, ProductID, Amount)"
-                + " VALUES (?, ?, 1)";
+                + " VALUES (?, ?, ?)";
         try {
             conn = new DBContext().getConnection();//ket noi SQL
             ps = conn.prepareStatement(query);
             ps.setInt(1, userID);
             ps.setInt(2, productID);
+            ps.setInt(3, quantity);
             ps.executeUpdate();
         } catch (Exception e) {
         }

@@ -43,7 +43,7 @@ public class CategoryControl extends HttpServlet {
 
             request.setAttribute("listP", list);
             request.setAttribute("listC", listC);
-            request.setAttribute("tag", cateID);
+            request.setAttribute("tagC", cateID);
 
             request.getRequestDispatcher("products.jsp").forward(request, response);
         }

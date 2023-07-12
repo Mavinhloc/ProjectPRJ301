@@ -76,7 +76,7 @@
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="categoryDropdown"> 
                                 <c:forEach items="${listC}" var="o">
-                                    <a class="dropdown-item ${tag == o.cid ? "active" : ""}" href="category?cid=${o.cid}">${o.cname}</a>
+                                    <a class="dropdown-item ${tagC == o.cid ? "active" : ""}" href="category?cid=${o.cid}">${o.cname}</a>
                                 </c:forEach>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
             </div>
             <div class="container">
                 <div id="content" class="row">
-                    <c:forEach items="${pageP}" var="o">
+                    <c:forEach items="${listP}" var="o">
                         <div class="product col-lg-4">
                             <div class="item">
                                 <div class="thumb">

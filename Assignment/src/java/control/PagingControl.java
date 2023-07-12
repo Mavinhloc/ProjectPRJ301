@@ -6,6 +6,7 @@ package control;
 
 import dao.DAO;
 import entity.Account;
+import entity.Category;
 import entity.Product;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -50,11 +51,14 @@ public class PagingControl extends HttpServlet {
             endPage++;
         }
         List<Product> list = dao.pagingProduct(index);
+        List<Category> listC = dao.getAllCategory();
+
         request.setAttribute("pageP", list);
         request.setAttribute("endP", endPage);
         request.setAttribute("tag", index);
         request.setAttribute("uid", id);
-        request.getRequestDispatcher("home").forward(request, response);
+        request.setAttribute("listC", listC);
+        request.getRequestDispatcher("products.jsp").forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
