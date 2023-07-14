@@ -41,103 +41,96 @@
         <jsp:include page="Header.jsp"></jsp:include>
 
 
-        <!-- ***** Main Banner Area Start ***** -->
-        <div class="main-banner" id="top">
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="left-content">
-                            <div class="thumb">
-                                <div class="inner-content">
-                                    <h4>We Are Home Gym</h4>
-                                    <div class="main-border-button">
-                                        <a href="products.jsp">Purchase Now!</a>
+            <!-- ***** Main Banner Area Start ***** -->
+            <div class="main-banner" id="top">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="left-content">
+                                <div class="thumb">
+                                    <div class="inner-content">
+                                        <h4>We Are Home Gym</h4>
+                                        <div class="main-border-button">
+                                            <a href="products.jsp">Purchase Now!</a>
+                                        </div>
                                     </div>
+                                    <img src="assets/images/Gym2.jpg" alt="">
                                 </div>
-                                <img src="assets/images/Gym2.jpg" alt="">
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="right-content">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="right-first-image">
-                                        <div class="thumb">
-                                            <div class="inner-content">
-                                                <h4>Women</h4>
-                                                <span>Best Clothes For Women</span>
-                                            </div>
-                                            <div class="hover-content">
-                                                <div class="inner">
-                                                    <h4>Women</h4>
-                                                    <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
-                                                    <div class="main-border-button">
-                                                        <a href="#">Discover More</a>
+                        <div class="col-lg-6">
+                            <div class="right-content">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="right-first-image">
+                                            <div class="thumb">
+                                                <div class="inner-content">
+                                                    <h4>Accessory</h4>
+                                                </div>
+                                                <div class="hover-content">
+                                                    <div class="inner">
+                                                        <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                        <div class="main-border-button">
+                                                            <a href="#">Discover More</a>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <img src="assets/images/Gym2.png">
                                             </div>
-                                            <img src="assets/images/baner-right-image-01.jpg">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="right-first-image">
-                                        <div class="thumb">
-                                            <div class="inner-content">
-                                                <h4>Men</h4>
-                                                <span>Best Clothes For Men</span>
-                                            </div>
-                                            <div class="hover-content">
-                                                <div class="inner">
-                                                    <h4>Men</h4>
-                                                    <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
-                                                    <div class="main-border-button">
-                                                        <a href="#">Discover More</a>
+                                    <div class="col-lg-6">
+                                        <div class="right-first-image">
+                                            <div class="thumb">
+                                                <div class="inner-content">
+                                                    <h4>Clothes</h4>
+                                                </div>
+                                                <div class="hover-content">
+                                                    <div class="inner">
+                                                        <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                        <div class="main-border-button">
+                                                            <a href="#">Discover More</a>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <img src="assets/images/GymShirt.jpg">
                                             </div>
-                                            <img src="assets/images/baner-right-image-02.jpg">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="right-first-image">
-                                        <div class="thumb">
-                                            <div class="inner-content">
-                                                <h4>Kids</h4>
-                                                <span>Best Clothes For Kids</span>
-                                            </div>
-                                            <div class="hover-content">
-                                                <div class="inner">
-                                                    <h4>Kids</h4>
-                                                    <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
-                                                    <div class="main-border-button">
-                                                        <a href="#">Discover More</a>
+                                    <div class="col-lg-6">
+                                        <div class="right-first-image">
+                                            <div class="thumb">
+                                                <div class="inner-content">
+                                                    <h4>Shoes</h4>
+                                                </div>
+                                                <div class="hover-content">
+                                                    <div class="inner">
+                                                        <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                        <div class="main-border-button">
+                                                            <a href="#">Discover More</a>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <img src="assets/images/GymShoes.jpg">
                                             </div>
-                                            <img src="assets/images/baner-right-image-03.jpg">
                                         </div>
                                     </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="right-first-image">
-                                        <div class="thumb">
-                                            <div class="inner-content">
-                                                <h4>Accessories</h4>
-                                                <span>Best Trend Accessories</span>
-                                            </div>
-                                            <div class="hover-content">
-                                                <div class="inner">
-                                                    <h4>Accessories</h4>
-                                                    <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
-                                                    <div class="main-border-button">
-                                                        <a href="#">Discover More</a>
+                                    <div class="col-lg-6">
+                                        <div class="right-first-image">
+                                            <div class="thumb">
+                                                <div class="inner-content">
+                                                    <h4>Machines</h4>
+                                                </div>
+                                                <div class="hover-content">
+                                                    <div class="inner">
+                                                        <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
+                                                        <div class="main-border-button">
+                                                            <a href="#">Discover More</a>
+                                                        </div>
                                                     </div>
                                                 </div>
+                                                <img src="assets/images/Jumpingropes.jpg">
                                             </div>
-                                            <img src="assets/images/baner-right-image-04.jpg">
                                         </div>
                                     </div>
                                 </div>
@@ -146,494 +139,54 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- ***** Main Banner Area End ***** -->
+            <!-- ***** Main Banner Area End ***** -->
 
-        <!-- ***** Men Area Starts ***** -->
-        <section class="section" id="men">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="section-heading">
-                            <h2>Latest Products</h2>
-                            <span>Our new product just had ben released</span>
+            <!-- ***** Latest Area Starts ***** -->
+            <section class="section" id="men">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="section-heading">
+                                <h2>Latest Products</h2>
+                                <span>Our new product just had ben released</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="men-item-carousel">
-                            <div class="owl-men-item owl-carousel">
-                                <div class="item">
-                                    <div class="thumb">
-                                        <div class="hover-content">
-                                            <ul>
-                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="men-item-carousel">
+                                <div class="owl-men-item owl-carousel">
+                                <c:forEach items="${listL}" var="o">
+                                    <div class="">
+                                        <div class="item">
+                                            <div class="thumb">
+                                                <div class="hover-content">
+                                                    <ul>
+                                                        <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
+                                                        <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
+                                                        <li><a href="cart?userID=${uid}&productID=${o.id}"><i class="fa fa-shopping-cart"></i></a></li>
+                                                    </ul>
+                                                </div>
+                                                <img src="${o.image}" alt="">
+                                            </div>
+                                            <div class="down-content">
+                                                <h4><a href="detail?pid=${o.id}">${o.name}</a></h4>
+                                                <span>${o.price} $</span>
+                                                <h5>${o.title}</h5>
+                                            </div>
                                         </div>
-                                        <img src="assets/images/men-01.jpg" alt="">
                                     </div>
-                                    <div class="down-content">
-                                        <h4>Classic Spring</h4>
-                                        <span>$120.00</span>
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="thumb">
-                                        <div class="hover-content">
-                                            <ul>
-                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <img src="assets/images/men-02.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Air Force 1 X</h4>
-                                        <span>$90.00</span>
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="thumb">
-                                        <div class="hover-content">
-                                            <ul>
-                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <img src="assets/images/men-03.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Love Nana ‘20</h4>
-                                        <span>$150.00</span>
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="thumb">
-                                        <div class="hover-content">
-                                            <ul>
-                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <img src="assets/images/men-01.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Classic Spring</h4>
-                                        <span>$120.00</span>
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                </c:forEach>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- ***** Men Area Ends ***** -->
+        <!-- ***** Latest Area Ends ***** -->
 
-        <!-- ***** Women Area Starts ***** -->
-        <section class="section" id="women">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="section-heading">
-                            <h2>Women's Latest</h2>
-                            <span>Details</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="women-item-carousel">
-                            <div class="owl-women-item owl-carousel">
-                                <div class="item">
-                                    <div class="thumb">
-                                        <div class="hover-content">
-                                            <ul>
-                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <img src="assets/images/women-01.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>New Green Jacket</h4>
-                                        <span>$75.00</span>
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="thumb">
-                                        <div class="hover-content">
-                                            <ul>
-                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <img src="assets/images/women-02.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Classic Dress</h4>
-                                        <span>$45.00</span>
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="thumb">
-                                        <div class="hover-content">
-                                            <ul>
-                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <img src="assets/images/women-03.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Spring Collection</h4>
-                                        <span>$130.00</span>
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="thumb">
-                                        <div class="hover-content">
-                                            <ul>
-                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <img src="assets/images/women-01.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Classic Spring</h4>
-                                        <span>$120.00</span>
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ***** Women Area Ends ***** -->
-
-        <!-- ***** Kids Area Starts ***** -->
-        <section class="section" id="kids">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="section-heading">
-                            <h2>Kid's Latest</h2>
-                            <span>Details</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="kid-item-carousel">
-                            <div class="owl-kid-item owl-carousel">
-                                <div class="item">
-                                    <div class="thumb">
-                                        <div class="hover-content">
-                                            <ul>
-                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <img src="assets/images/kid-01.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>School Collection</h4>
-                                        <span>$80.00</span>
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="thumb">
-                                        <div class="hover-content">
-                                            <ul>
-                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <img src="assets/images/kid-02.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Summer Cap</h4>
-                                        <span>$12.00</span>
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="thumb">
-                                        <div class="hover-content">
-                                            <ul>
-                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <img src="assets/images/kid-03.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Classic Kid</h4>
-                                        <span>$30.00</span>
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="item">
-                                    <div class="thumb">
-                                        <div class="hover-content">
-                                            <ul>
-                                                <li><a href="single-product.jsp"><i class="fa fa-eye"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-star"></i></a></li>
-                                                <li><a href="single-product.jsp"><i class="fa fa-shopping-cart"></i></a></li>
-                                            </ul>
-                                        </div>
-                                        <img src="assets/images/kid-01.jpg" alt="">
-                                    </div>
-                                    <div class="down-content">
-                                        <h4>Classic Spring</h4>
-                                        <span>$120.00</span>
-                                        <ul class="stars">
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                            <li><i class="fa fa-star"></i></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ***** Kids Area Ends ***** -->
-
-        <!-- ***** Explore Area Starts ***** -->
-        <section class="section" id="explore">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="left-content">
-                            <h2>Explore Our Products</h2>
-                            <div class="quote">
-                                <i class="fa fa-quote-left"></i><p>Hello</p>
-                            </div>
-                            <p></p>
-                            <p><a rel="nofollow" href="" target="_blank">support us</a></p>
-                            <div class="main-border-button">
-                                <a href="products.jsp">Discover More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="right-content">
-                            <div class="row">
-                                <div class="col-lg-6">
-                                    <div class="leather">
-                                        <h4>Leather Bags</h4>
-                                        <span>Latest Collection</span>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="first-image">
-                                        <img src="assets/images/explore-image-01.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="second-image">
-                                        <img src="assets/images/explore-image-02.jpg" alt="">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="types">
-                                        <h4>Different Types</h4>
-                                        <span>Over 304 Products</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ***** Explore Area Ends ***** -->
-
-        <!-- ***** Social Area Starts ***** -->
-        <section class="section" id="social">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="section-heading">
-                            <h2>Social Media</h2>
-                            <span></span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row images">
-                    <div class="col-2">
-                        <div class="thumb">
-                            <div class="icon">
-                                <a href="http://instagram.com">
-                                    <h6>Fashion</h6>
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </div>
-                            <img src="assets/images/instagram-01.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="thumb">
-                            <div class="icon">
-                                <a href="http://instagram.com">
-                                    <h6>New</h6>
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </div>
-                            <img src="assets/images/instagram-02.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="thumb">
-                            <div class="icon">
-                                <a href="http://instagram.com">
-                                    <h6>Brand</h6>
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </div>
-                            <img src="assets/images/instagram-03.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="thumb">
-                            <div class="icon">
-                                <a href="http://instagram.com">
-                                    <h6>Makeup</h6>
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </div>
-                            <img src="assets/images/instagram-04.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="thumb">
-                            <div class="icon">
-                                <a href="http://instagram.com">
-                                    <h6>Leather</h6>
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </div>
-                            <img src="assets/images/instagram-05.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="thumb">
-                            <div class="icon">
-                                <a href="http://instagram.com">
-                                    <h6>Bag</h6>
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                            </div>
-                            <img src="assets/images/instagram-06.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ***** Social Area Ends ***** -->
 
         <!-- ***** Subscribe Area Starts ***** -->
         <div class="subscribe">

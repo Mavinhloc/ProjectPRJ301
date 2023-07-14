@@ -197,6 +197,29 @@ public class DAO {
         return list;
     }
 
+    public List<Product> getLatest() {
+        List<Product> list = new ArrayList<>();
+        String query = "SELECT TOP 3 *\n"
+                + "FROM product\n"
+                + "ORDER BY id DESC;";
+        try {
+            conn = new DBContext().getConnection();//ket noi SQL
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new Product(rs.getInt(1),
+                        rs.getString(2),
+                        rs.getString(3),
+                        rs.getDouble(4),
+                        rs.getString(5),
+                        rs.getString(6)
+                ));
+            }
+        } catch (Exception e) {
+        }
+        return list;
+    }
+
     public Account login(String user, String pass) {
         String query = "select * from Account \n"
                 + "where [user] = ? "
@@ -300,7 +323,7 @@ public class DAO {
         } catch (Exception e) {
         }
     }
-    
+
     public void deleteCart(String cid) {
         String query = "delete from Cart\n"
                 + "where ProductID = ?";
@@ -465,20 +488,20 @@ public class DAO {
 
             while (rs.next()) {
                 int accountID = rs.getInt("AccountID");
-            int productID = rs.getInt("ProductID");
-            int amount = rs.getInt("Amount");
-            String image = rs.getString("image");
-            String name = rs.getString("name");
-            double price = rs.getDouble("price");
+                int productID = rs.getInt("ProductID");
+                int amount = rs.getInt("Amount");
+                String image = rs.getString("image");
+                String name = rs.getString("name");
+                double price = rs.getDouble("price");
 
-            Cart cartItem = new Cart(accountID, productID, amount);
-            cartItem.setImage(image);
-            cartItem.setName(name);
-            cartItem.setPrice(price);
-            cartItems.add(cartItem);
+                Cart cartItem = new Cart(accountID, productID, amount);
+                cartItem.setImage(image);
+                cartItem.setName(name);
+                cartItem.setPrice(price);
+                cartItems.add(cartItem);
             }
         } catch (Exception e) {
-        } 
+        }
         return cartItems;
     }
 

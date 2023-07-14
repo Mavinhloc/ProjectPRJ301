@@ -8,7 +8,7 @@
             <div class="col-12">
                 <nav class="main-nav">
                     <!-- ***** Logo Start ***** -->
-                    <a href="index.jsp" class="logo">
+                    <a href="homepage" class="logo">
                         <img src="assets/images/logo1.png">
                     </a>
                     <!-- ***** Logo End ***** -->
@@ -29,7 +29,15 @@
                                 </li>
                             </c:otherwise>
                         </c:choose>
-                        <li class="scroll-to-section nav-item"><a href="showCart">Cart</a></li>
+                        <c:choose>
+                            <c:when test="${sessionScope.acc != null}">
+                                <li class="scroll-to-section nav-item"><a href="showCart">Cart</a></li>
+                                </c:when>
+                                <c:otherwise>
+                                <li class="scroll-to-section nav-item"><a href="index.jsp">Cart</a></li>
+                                </c:otherwise>
+                            </c:choose>
+
                         <li class="submenu">
                             <a href="javascript:;">Pages</a>
                             <ul>
