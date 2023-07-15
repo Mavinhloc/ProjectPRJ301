@@ -63,15 +63,15 @@
                                                         <div class="p-2">
                                                             <img src="${o.image}" alt="" width="70" class="img-fluid rounded shadow-sm">
                                                             <div class="ml-3 d-inline-block align-middle">
-                                                                <h5 class="mb-0"> <a href="detail?pid=${o.id}" class="text-dark d-inline-block">${o.name}</a></h5><span class="text-muted font-weight-normal font-italic"></span>
+                                                                <h5 class="mb-0"> <a href="detail?pid=${o.productID}" class="text-dark d-inline-block">${o.name}</a></h5><span class="text-muted font-weight-normal font-italic"></span>
                                                             </div>
                                                         </div>
                                                     </th>
                                                     <td class="align-middle"><strong>${o.price}</strong></td>
                                                     <td class="align-middle">
-                                                        <a href="#"><button class="btnSub btn btn-sm btn-outline-secondary">-</button></a>
+                                                        <a href="minusQuantity?productID=${o.productID}"><button class="btnSub btn btn-sm btn-outline-secondary">-</button></a>
                                                         <strong class="quantity">${o.amount}</strong>
-                                                        <a href="#"><button class="btnAdd btn btn-sm btn-outline-secondary">+</button></a>
+                                                        <a href="addQuantity?productID=${o.productID}"><button class="btnAdd btn btn-sm btn-outline-secondary">+</button></a>
                                                     </td>
 
                                                     <td class="align-middle"><a href="#" class="text-dark">
@@ -91,7 +91,7 @@
 
                         <div class="row py-5 p-4 bg-white rounded shadow-sm">
                             <div class="col-lg-6">
-                                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold"><a style="color: black"href="home">Continue to Shopping</a></div><br>
+                                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold"><a style="color: black"href="homepage">Continue to Shopping</a></div><br>
                                 <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Voucher</div>
                                 <div class="p-4">
                                     <div class="input-group mb-4 border rounded-pill p-2">

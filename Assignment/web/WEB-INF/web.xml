@@ -88,6 +88,14 @@
         <servlet-name>HomePage</servlet-name>
         <servlet-class>control.HomePage</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>AddQuantity</servlet-name>
+        <servlet-class>control.AddQuantity</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>minusQuantity</servlet-name>
+        <servlet-class>control.minusQuantity</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>HomeControl</servlet-name>
         <url-pattern>/home</url-pattern>
@@ -175,6 +183,14 @@
     <servlet-mapping>
         <servlet-name>HomePage</servlet-name>
         <url-pattern>/homepage</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddQuantity</servlet-name>
+        <url-pattern>/addQuantity</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>minusQuantity</servlet-name>
+        <url-pattern>/minusQuantity</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

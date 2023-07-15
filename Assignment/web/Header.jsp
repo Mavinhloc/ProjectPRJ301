@@ -34,7 +34,7 @@
                                 <li class="scroll-to-section nav-item"><a href="showCart">Cart</a></li>
                                 </c:when>
                                 <c:otherwise>
-                                <li class="scroll-to-section nav-item"><a href="index.jsp">Cart</a></li>
+                                <li class="scroll-to-section nav-item"><a href="Cart.jsp">Cart</a></li>
                                 </c:otherwise>
                             </c:choose>
 

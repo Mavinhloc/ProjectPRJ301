@@ -505,6 +505,34 @@ public class DAO {
         return cartItems;
     }
 
+    public int addQuantity(int id) {
+        String query = "UPDATE Cart\n"
+                + "SET Amount = Amount + 1\n"
+                + "WHERE productID = ?;";
+        try {
+            conn = new DBContext().getConnection();  // Get database connection
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, id);
+            rs = ps.executeQuery();
+        } catch (Exception e) {
+        }
+        return 0;
+    }
+    
+    public int minusQuantity(int id) {
+        String query = "UPDATE Cart\n"
+                + "SET Amount = Amount - 1\n"
+                + "WHERE productID = ?;";
+        try {
+            conn = new DBContext().getConnection();  // Get database connection
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, id);
+            rs = ps.executeQuery();
+        } catch (Exception e) {
+        }
+        return 0;
+    }
+
     public static void main(String[] args) {
         DAO dao = new DAO();
         List<Product> list = dao.pagingProduct(4);
