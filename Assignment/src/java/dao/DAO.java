@@ -8,6 +8,8 @@ import context.DBContext;
 import entity.Account;
 import entity.Cart;
 import entity.Category;
+import entity.Order;
+import entity.OrderExtend;
 import entity.Product;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -39,6 +41,27 @@ public class DAO {
                         rs.getDouble(4),
                         rs.getString(5),
                         rs.getString(6)
+                ));
+            }
+        } catch (Exception e) {
+        }
+        return list;
+    }
+    
+    public List<OrderExtend> getAllOrder() {
+        List<OrderExtend> list = new ArrayList<>();
+        String query = "select * from Orders";
+        try {
+            conn = new DBContext().getConnection();//ket noi SQL
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                list.add(new OrderExtend(rs.getString(1),
+                        rs.getString(2),
+                        rs.getDouble(3),
+                        rs.getString(4),
+                        rs.getString(5),
+                        rs.getInt(6)
                 ));
             }
         } catch (Exception e) {
@@ -457,6 +480,41 @@ public class DAO {
         return list;
     }
 
+    public boolean checkProductInCart(int userID, int productID) {
+        boolean productExists = false;
+        String query = "SELECT COUNT(*) FROM Cart WHERE AccountID = ? AND ProductID = ?";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, userID);
+            ps.setInt(2, productID);
+            rs = ps.executeQuery();
+            if (rs.next()) {
+                int count = rs.getInt(1);
+                if (count > 0) {
+                    productExists = true;
+                }
+            }
+        } catch (Exception e) {
+            // Handle exceptions
+        }
+        return productExists;
+    }
+
+    public void updateCartQuantity(int userID, int productID, int quantity) {
+        String query = "UPDATE Cart SET Amount = Amount + ? WHERE AccountID = ? AND ProductID = ?";
+        try {
+            conn = new DBContext().getConnection();
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, quantity);
+            ps.setInt(2, userID);
+            ps.setInt(3, productID);
+            ps.executeUpdate();
+        } catch (Exception e) {
+            // Handle exceptions
+        }
+    }
+
     public void addToCart(int userID, int productID, int quantity) {
         String query = "INSERT INTO Cart "
                 + "(AccountID, ProductID, Amount)"
@@ -505,6 +563,67 @@ public class DAO {
         return cartItems;
     }
 
+    public void clearCart(int userID) {
+        String query = "DELETE FROM Cart WHERE AccountID = ?";
+
+        try {
+            conn = new DBContext().getConnection();  // Get database connection
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, userID);
+
+            ps.executeUpdate();
+        } catch (Exception e) {
+            // Handle any exceptions
+        }
+    }
+
+    public List<Order> getOrderDataByUserID(int userID) {
+        List<Order> orders = new ArrayList<>();
+        String query = "SELECT orderID, address, amount, order_date, status, productID FROM Orders WHERE userid = ?";
+
+        try {
+            conn = new DBContext().getConnection();  // Get database connection
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, userID);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+                String orderID = rs.getString("orderID");
+                String address = rs.getString("address");
+                double amount = rs.getDouble("amount");
+                String orderDate = rs.getString("order_date");
+                String status = rs.getString("status");
+                int productID = rs.getInt("productID");
+
+                Order order = new Order(orderID, address, amount, orderDate, status, productID);
+                orders.add(order);
+            }
+        } catch (Exception e) {
+            // Handle any exceptions
+        }
+
+        return orders;
+    }
+
+    public void insertOrder(int userID, String address, String payment, int amount, int productID) {
+        String query = "INSERT INTO Orders (userid, address, paymentmethod, amount, order_date, productID, status) "
+                + "VALUES (?, ?, ?, ?, GETDATE(), ?, 'Pending')";
+
+        try {
+            conn = new DBContext().getConnection();  // Get database connection
+            ps = conn.prepareStatement(query);
+            ps.setInt(1, userID);
+            ps.setString(2, address);
+            ps.setString(3, payment);
+            ps.setInt(4, amount);
+            ps.setInt(5, productID);
+
+            ps.executeUpdate();
+        } catch (Exception e) {
+            // Handle any exceptions
+        }
+    }
+
     public int addQuantity(int id) {
         String query = "UPDATE Cart\n"
                 + "SET Amount = Amount + 1\n"
@@ -518,7 +637,7 @@ public class DAO {
         }
         return 0;
     }
-    
+
     public int minusQuantity(int id) {
         String query = "UPDATE Cart\n"
                 + "SET Amount = Amount - 1\n"
@@ -535,8 +654,8 @@ public class DAO {
 
     public static void main(String[] args) {
         DAO dao = new DAO();
-        List<Product> list = dao.pagingProduct(4);
-        for (Product o : list) {
+        List<Order> list = dao.getAllOrder();
+        for (Order o : list) {
             System.out.println(o);
         }
     }

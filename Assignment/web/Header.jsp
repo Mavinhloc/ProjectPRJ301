@@ -55,26 +55,28 @@
 
                                 <c:if test="${sessionScope.acc.isAdmin == 1}">
                                     <li><a href="account">Account</a></li>
-                                    </c:if>               
-                                <li><a href="#">Features Page 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="search-form">
-                            <form action="search" method="post">
-                                <input type="text" id="search-input" name="txt" value="${searchValue}" placeholder="Search...">
-                                <button type="submit">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </form>
-                        </li>
-                    </ul>        
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    <!-- ***** Menu End ***** -->
-                </nav>
+                                    </c:if>        
+                                <c:if test="${sessionScope.acc.isSell == 1 || sessionScope.acc.isAdmin == 1}">
+                                    <li><a href="order">Orders</a></li>
+                                </c:if>
+                                </ul>
+                            </li>
+                            <li class="search-form">
+                                <form action="search" method="post">
+                                    <input type="text" id="search-input" name="txt" value="${searchValue}" placeholder="Search...">
+                                    <button type="submit">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>        
+                        <a class='menu-trigger'>
+                            <span>Menu</span>
+                        </a>
+                        <!-- ***** Menu End ***** -->
+                    </nav>
+                </div>
             </div>
         </div>
-    </div>
-</header>
-<!-- ***** Header Area End ***** -->
+    </header>
+    <!-- ***** Header Area End ***** -->

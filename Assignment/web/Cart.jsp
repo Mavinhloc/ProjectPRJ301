@@ -30,12 +30,11 @@
             <br>
             <div class="shopping-cart">
                 <div class="px-4 px-lg-0">
-
                     <div class="pb-5">
                         <div class="container">
                             <div class="row">
                                 <div class="col-lg-12 p-5 bg-white rounded shadow-sm mb-5">
-
+                                    <a href="history"><button>Cart History</button></a>
                                     <!-- Shopping cart table -->
                                     <div class="table-responsive">
                                         <table class="table">
@@ -59,23 +58,27 @@
                                             <c:set var="totalAmount" value="0" />
                                             <c:forEach items="${listCart}" var="o">
                                                 <tr>
-                                                    <th scope="row">
+                                                    <td>
+                                                        <input type="checkbox" name="selectedProducts" value="${o.productID}">
+                                                    </td>
+                                                    <td>
                                                         <div class="p-2">
                                                             <img src="${o.image}" alt="" width="70" class="img-fluid rounded shadow-sm">
                                                             <div class="ml-3 d-inline-block align-middle">
-                                                                <h5 class="mb-0"> <a href="detail?pid=${o.productID}" class="text-dark d-inline-block">${o.name}</a></h5><span class="text-muted font-weight-normal font-italic"></span>
+                                                                <h5 class="mb-0"> <a href="detail?pid=${o.productID}" class="text-dark d-inline-block">${o.name}</a></h5>
+                                                                <span class="text-muted font-weight-normal font-italic"></span>
                                                             </div>
                                                         </div>
-                                                    </th>
+                                                    </td>
                                                     <td class="align-middle"><strong>${o.price}</strong></td>
                                                     <td class="align-middle">
                                                         <a href="minusQuantity?productID=${o.productID}"><button class="btnSub btn btn-sm btn-outline-secondary">-</button></a>
                                                         <strong class="quantity">${o.amount}</strong>
                                                         <a href="addQuantity?productID=${o.productID}"><button class="btnAdd btn btn-sm btn-outline-secondary">+</button></a>
                                                     </td>
-
-                                                    <td class="align-middle"><a href="#" class="text-dark">
-                                                            <a href="deleteCart?pid=${o.productID}" onclick="return confirm('Are you sure you want to delete this item?')"><button type="button" class="btn btn-danger">Delete</button></a>
+                                                    <td class="align-middle">
+                                                        <a href="deleteCart?pid=${o.productID}" onclick="return confirm('Are you sure you want to delete this item?')">
+                                                            <button type="button" class="btn btn-danger">Delete</button>
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -88,35 +91,30 @@
                                 <!-- End -->
                             </div>
                         </div>
-
                         <div class="row py-5 p-4 bg-white rounded shadow-sm">
                             <div class="col-lg-6">
-                                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold"><a style="color: black"href="homepage">Continue to Shopping</a></div><br>
-                                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Voucher</div>
-                                <div class="p-4">
-                                    <div class="input-group mb-4 border rounded-pill p-2">
-                                        <input type="text" placeholder="Nhập Voucher" aria-describedby="button-addon3" class="form-control border-0">
-                                        <div class="input-group-append border-0">
-                                            <button id="button-addon3" type="button" class="btn btn-dark px-4 rounded-pill"><i class="fa fa-gift mr-2"></i>Sử dụng</button>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">
+                                    <a style="color: black" href="homepage">Continue to Shopping</a>
+                                </div><br>
                             </div>
                             <div class="col-lg-6">
                                 <div class="bg-light rounded-pill px-4 py-3 text-uppercase font-weight-bold">Thành tiền</div>
                                 <div class="p-4">
                                     <ul class="list-unstyled mb-4">
-                                        <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Tổng tiền hàng</strong><strong>${totalAmount} $</strong></li>
+                                        <li class="d-flex justify-content-between py-3 border-bottom">
+                                            <strong class="text-muted">Tổng tiền hàng</strong>
+                                            <strong>${totalAmount} $</strong>
                                         </li>
-                                    </ul><a href="buy" class="btn btn-dark rounded-pill py-2 btn-block">Mua hàng</a>
+                                    </ul>
+                                    <a href="CheckOut.jsp"><button type="submit" class="btn btn-dark rounded-pill py-2 btn-block">Mua hàng</button></a>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
         </div>
+
         <jsp:include page="Footer.jsp"></jsp:include>
 
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

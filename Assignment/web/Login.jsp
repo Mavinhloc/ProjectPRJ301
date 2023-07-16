@@ -27,16 +27,9 @@
                 <input name="user" type="text" id="inputEmail" class="form-control" placeholder="Username" required="" autofocus="">
                 <input name="pass" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
                 <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign in</button>
-                <a href="#" id="forgot_pswd">Forgot password?</a>
                 <hr>
                 <!-- <p>Don't have an account!</p>  -->
                 <button class="btn btn-primary btn-block" type="button" id="btn-signup"><i class="fas fa-user-plus"></i> Sign up New Account</button>
-            </form>
-
-            <form action="/reset/password/" class="form-reset">
-                <input type="email" id="resetEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-                <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
-                <a href="#" id="cancel_reset"><i class="fas fa-angle-left"></i> Back</a>
             </form>
 
             <form action="signup" method="post" class="form-signup">

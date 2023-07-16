@@ -6,19 +6,21 @@ package control;
 
 import dao.DAO;
 import entity.Account;
-import entity.Product;
+import entity.Cart;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import java.util.List;
 
 /**
  *
  * @author ASUS
  */
-public class CartControl extends HttpServlet {
+public class CheckOutControl extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,18 +34,24 @@ public class CartControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        int uid = Integer.parseInt(request.getParameter("userID"));
-        int pid = Integer.parseInt(request.getParameter("productID"));
-        int quantity = Integer.parseInt(request.getParameter("quantity"));
+        HttpSession session = request.getSession();
+        Account a = (Account) session.getAttribute("acc");
+        String address = request.getParameter("address");
+        String paymentMethod = request.getParameter("paymentmethod");
+        int userID = a.getId();
         DAO dao = new DAO();
-        boolean productExists = dao.checkProductInCart(uid, pid);
-        if (productExists) {
-            dao.updateCartQuantity(uid, pid, quantity);
-        } else {
-            dao.addToCart(uid, pid, quantity);
+        List<Cart> cartItems = dao.getAllProductInCart(userID);
+
+        for (Cart cartItem : cartItems) {
+            int productID = cartItem.getProductID();
+            int amount = cartItem.getAmount();
+            dao.insertOrder(userID, address, paymentMethod, amount, productID);
         }
-        request.setAttribute("pid", pid);
-        request.getRequestDispatcher("home").forward(request, response);
+
+        dao.clearCart(userID);
+
+        request.getRequestDispatcher("homepage").forward(request, response);
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
