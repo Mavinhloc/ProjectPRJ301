@@ -46,37 +46,39 @@
                                 <li><a href="contact.jsp">Contact Us</a></li>
                             </ul>
                         </li>
-                        <li class="submenu">
-                            <a href="javascript:;">Manage</a>
-                            <ul>
-                                <c:if test="${sessionScope.acc.isSell == 1}">
-                                    <li><a href="manager">Products</a></li>
-                                    </c:if>
-
-                                <c:if test="${sessionScope.acc.isAdmin == 1}">
-                                    <li><a href="account">Account</a></li>
-                                    </c:if>        
-                                <c:if test="${sessionScope.acc.isSell == 1 || sessionScope.acc.isAdmin == 1}">
-                                    <li><a href="order">Orders</a></li>
-                                </c:if>
+                        <c:if test="${sessionScope.acc.isSell == 1 || sessionScope.acc.isAdmin == 1}">
+                            <li class="submenu">
+                                <a href="javascript:;">Manage</a>
+                                <ul>
+                                    <c:if test="${sessionScope.acc.isSell == 1}">
+                                        <li><a href="manager">Products</a></li>
+                                        </c:if>
+                                        <c:if test="${sessionScope.acc.isAdmin == 1}">
+                                        <li><a href="account">Account</a></li>
+                                        </c:if>
+                                        <c:if test="${sessionScope.acc.isSell == 1 || sessionScope.acc.isAdmin == 1}">
+                                        <li><a href="order">Orders</a></li>
+                                        </c:if>
                                 </ul>
                             </li>
-                            <li class="search-form">
-                                <form action="search" method="post">
-                                    <input type="text" id="search-input" name="txt" value="${searchValue}" placeholder="Search...">
-                                    <button type="submit">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </form>
-                            </li>
-                        </ul>        
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
+                        </c:if>
+
+                        <li class="search-form">
+                            <form action="search" method="post">
+                                <input type="text" id="search-input" name="txt" value="${searchValue}" placeholder="Search...">
+                                <button type="submit">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </form>
+                        </li>
+                    </ul>        
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
             </div>
         </div>
-    </header>
-    <!-- ***** Header Area End ***** -->
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->

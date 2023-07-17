@@ -6,20 +6,18 @@
 package control;
 
 import dao.DAO;
-import entity.Order;
 import java.io.IOException;
 import java.io.PrintWriter;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.util.List;
 
 /**
  *
  * @author ASUS
  */
-public class OrderControl extends HttpServlet {
+public class UpdateOrderControl extends HttpServlet {
    
     /** 
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code> methods.
@@ -31,12 +29,11 @@ public class OrderControl extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String orderID = request.getParameter("orderid");
+        
         DAO dao = new DAO();
-        List<Order> list = dao.getAllOrder();
         
-        request.setAttribute("listO", list);
         
-        request.getRequestDispatcher("AllOrders.jsp").forward(request, response);
     } 
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

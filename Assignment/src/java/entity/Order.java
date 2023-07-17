@@ -4,22 +4,24 @@
  */
 package entity;
 
+import java.util.Date;
+
 /**
  *
  * @author ASUS
  */
 public class Order {
-    private String orderID;
+    private int orderID;
     private String address;
     private double amount;
-    private String orderDate;
+    private Date orderDate;
     private String status;
     private int productID;
 
     public Order() {
     }
 
-    public Order(String orderID, String address, double amount, String orderDate, String status, int productID) {
+    public Order(int orderID, String address, double amount, Date orderDate, String status, int productID) {
         this.orderID = orderID;
         this.address = address;
         this.amount = amount;
@@ -28,11 +30,11 @@ public class Order {
         this.productID = productID;
     }
 
-    public String getOrderID() {
+    public int getOrderID() {
         return orderID;
     }
 
-    public void setOrderID(String orderID) {
+    public void setOrderID(int orderID) {
         this.orderID = orderID;
     }
 
@@ -52,11 +54,11 @@ public class Order {
         this.amount = amount;
     }
 
-    public String getOrderDate() {
+    public Date getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(String orderDate) {
+    public void setOrderDate(Date orderDate) {
         this.orderDate = orderDate;
     }
 
@@ -76,6 +78,7 @@ public class Order {
         this.productID = productID;
     }
 
+   
     
 }
 

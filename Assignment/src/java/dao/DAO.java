@@ -15,6 +15,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -47,21 +48,21 @@ public class DAO {
         }
         return list;
     }
-    
-    public List<OrderExtend> getAllOrder() {
-        List<OrderExtend> list = new ArrayList<>();
-        String query = "select * from Orders";
+
+    public List<Order> getAllOrder() {
+        List<Order> list = new ArrayList<>();
+        String query = "SELECT * from [Orders]";
         try {
             conn = new DBContext().getConnection();//ket noi SQL
             ps = conn.prepareStatement(query);
             rs = ps.executeQuery();
             while (rs.next()) {
-                list.add(new OrderExtend(rs.getString(1),
-                        rs.getString(2),
-                        rs.getDouble(3),
-                        rs.getString(4),
-                        rs.getString(5),
-                        rs.getInt(6)
+                list.add(new Order(rs.getInt("orderID"),
+                        rs.getString("address"),
+                        rs.getDouble("amount"),
+                        rs.getDate("order_date"),
+                        rs.getString("status"),
+                        rs.getInt("productID")
                 ));
             }
         } catch (Exception e) {
@@ -190,6 +191,28 @@ public class DAO {
                         rs.getDouble(4),
                         rs.getString(5),
                         rs.getString(6)
+                );
+            }
+        } catch (Exception e) {
+        }
+        return null;
+    }
+    
+    public Order getAllOrderByOrderId(String id) {
+        String query = "select * from Orders \n"
+                + "where orderID = ?";
+        try {
+            conn = new DBContext().getConnection();//ket noi SQL
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while (rs.next()) {
+                return new Order(rs.getInt("orderID"),
+                        rs.getString("address"),
+                        rs.getDouble("amount"),
+                        rs.getDate("order_date"),
+                        rs.getString("status"),
+                        rs.getInt("productID")
                 );
             }
         } catch (Exception e) {
@@ -330,6 +353,20 @@ public class DAO {
             conn = new DBContext().getConnection();//ket noi SQL
             ps = conn.prepareStatement(query);
             ps.setString(1, pid);
+            ps.executeUpdate();
+        } catch (Exception e) {
+        }
+    }
+
+    public void deleteOrder(String pid, int oid) {
+        String query = "delete from Orders\n"
+                + "where productID = ? "
+                + "and orderID = ?";
+        try {
+            conn = new DBContext().getConnection();//ket noi SQL
+            ps = conn.prepareStatement(query);
+            ps.setString(1, pid);
+            ps.setInt(2, oid);
             ps.executeUpdate();
         } catch (Exception e) {
         }
@@ -588,10 +625,10 @@ public class DAO {
             rs = ps.executeQuery();
 
             while (rs.next()) {
-                String orderID = rs.getString("orderID");
+                int orderID = rs.getInt("orderID");
                 String address = rs.getString("address");
                 double amount = rs.getDouble("amount");
-                String orderDate = rs.getString("order_date");
+                Date orderDate = rs.getDate("order_date");
                 String status = rs.getString("status");
                 int productID = rs.getInt("productID");
 

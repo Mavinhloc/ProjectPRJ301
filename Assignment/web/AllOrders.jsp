@@ -6,49 +6,20 @@
     <head>
         <meta charset="UTF-8">
         <title>Order History</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-            }
-
-            h1 {
-                text-align: center;
-            }
-
-            table {
-                width: 100%;
-                border-collapse: collapse;
-            }
-
-            th, td {
-                padding: 10px;
-                text-align: left;
-            }
-
-            th {
-                background-color: #f2f2f2;
-                font-weight: bold;
-            }
-
-            tr:nth-child(even) {
-                background-color: #f9f9f9;
-            }
-
-        </style>
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css">
         <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-
         <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.css">
-
         <link rel="stylesheet" href="assets/css/maincss.css">
-
         <link rel="stylesheet" href="assets/css/owl-carousel.css">
-
         <link rel="stylesheet" href="assets/css/lightbox.css">
-
-        <link rel="stylesheet" type="text/css" href="assets/css/cart.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+        <link rel="stylesheet" type="text/css" href="assets/css/cart.css"/>
     </head>
     <body>
         <jsp:include page="Header.jsp"></jsp:include>
@@ -68,6 +39,7 @@
                         <th>Amount</th>
                         <th>Order Date</th>
                         <th>Status</th>
+                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -78,6 +50,10 @@
                         <td>${order.amount}</td>
                         <td>${order.orderDate}</td>
                         <td>${order.status}</td>
+                        <td>
+                            <a href="updateOrder?orderid=${order.orderID}"><button class="editButton"><i class="fas fa-pencil-alt"></i></button></a>
+                            <a href="deleteOrder?pid=${order.productID}&orderID=${order.orderID}" onclick="return confirm('Are you sure you want to delete this item?')"><button class="deleteButton"><i class="fas fa-times"></i></button></a>
+                        </td>
                     </tr>
                 </c:forEach>
             </tbody>
